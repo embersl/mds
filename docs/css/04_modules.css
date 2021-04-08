@@ -1,0 +1,1176 @@
+/* 04_modules.css includes settings for modules in the reference document */
+
+/*==========  module custom properties  ==========*/
+@media screen {
+    :root {
+
+/* grid*/
+        --grid5432gallery: repeat(auto-fill, minmax(210px, 1fr));
+        --grid5322co5: repeat(2, 1fr);
+        
+        
+/* module specific elements */
+        --h_2-hide: none;
+        
+        --co_5-grid-column: 1 / -1;
+        
+        --co_6-profile-margin: 20vw auto 0;
+        --co_6-bg-height: 50vw;
+        --co_6-bg-width: 100%;
+        
+        --co_7-imgoverlapmargin: calc(var(--marginlarge) * 2);
+        --co_7-imgoverlapmargintop: -150px;
+        
+        --te_2-order: -1;
+        
+        --cal_1-taskcolor: violet;
+}
+}
+
+@media screen and (min-width: 460px) {
+    :root {
+/*        grid */
+        --grid432a: repeat(auto-fill, minmax(260px, 1fr));
+        --grid332a: repeat(auto-fill, minmax(300px, 1fr));
+        --grid222a: repeat(auto-fill, minmax(260px, 1fr));
+/*        --grid222x-fixed: repeat(2, 1fr);*/
+        --gridauto: repeat(auto-fill, minmax(var(--min), 1fr));
+        
+/*    column */
+        --col432x: 260px 4; 
+        --col332x: 280px 3;
+        --col222x: 300px 2;
+        --colgap: 32px;
+        --colrule: 1px dashed var(--sw-12);
+        
+/* module specific elements */
+       
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+/*        grid*/
+        --grid5322co5: 1fr 2fr;
+        --grid222a: repeat(2, 1fr);
+        --grid222x-fixed: repeat(2, 1fr);
+        --gridpreview: 3fr minmax(300px, 1fr);
+        --gridchart: minmax(180px, 1fr) 4fr;
+        
+/*        column */
+        --col33xx: 3;
+        --colgap: 40px;
+        
+/*        module specific elements */
+        
+        --h_2-hide: block;
+        
+        --co_5-grid-column: span 1 / -1;
+        --co_5-grid-row: 1 / span 4; /* no grid-template-row, no grid line -1 for row, has to be explicit grids */
+        
+        --co_6-grid: 2fr minmax(340px, 1fr);
+        --co_6-profile-margin: var(--marginlarge) 0 var(--marginlarge) auto;
+        --co_6-bg-height: 100%;
+        --co_6-bg-width: calc(100% - min(20vw, 210px));
+        --co_6-margin: var(--l_r_negmargin);
+        
+        --co_7-grid: 1fr minmax(400px, 2fr) 2fr;
+        --co_7-imgoverlapmargin: unset;
+        --co_7-imgoverlapmargintop: unset;
+        
+        --te_2-padding: 0 4em;
+        --te_2-order: 0;
+        --te_2-flex: 1 1 500px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+/*        grid */
+/*        --grid5432gallery: repeat(5, 1fr);*/
+        --grid5322co5: 1fr 1fr 3fr;
+        --grid332a: repeat(3, 1fr);
+        
+/*        columns */
+        --colgap: 48px;
+        
+/*        module specific elements */
+        --co_5-grid-row: 1 / span 2;
+        --grid5432gallery-height: calc(100vw / 5 * 2);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :root {
+/*        grid */
+        --grid5432gallery: repeat(6, 1fr);
+        --grid432a: repeat(4, 1fr);
+        
+/*        columns */
+/*        --colgap: 56px;*/
+    }
+}
+
+@media print {
+    :root {
+/*        grid */
+        --grid5432gallery: repeat(6, 1fr);
+        --grid432a: repeat(4, 1fr);
+        --grid5322co5: 1fr 1fr 3fr;
+        --grid332a: repeat(3, 1fr);
+        
+        --grid222a: repeat(2, 1fr);
+        --grid222x-fixed: repeat(2, 1fr);
+        --gridpreview: 3fr minmax(2.5in, 1fr);
+        --gridchart: minmax(180px, 1fr) 4fr;
+        --gridauto: repeat(auto-fill, minmax(var(--min), 1fr));
+        
+        
+/*        columns */
+        --colgap: 0.25in;
+/*        --col33xx: 3;*/
+        --col432x: 1in 4; 
+        --col332x: 2in 3;
+        --col222x: 3in 2;
+        --colrule: 0.25pt dashed var(--sw-12);
+        
+        
+/*        module specific elements */
+        --h_2-hide: none;
+        
+        --co_5-grid-row: 1 / span 2;
+        --grid5432gallery-height: calc(100vw / 5 * 2);
+        
+        --h_2-hide: block;
+        
+        --co_5-grid-column: span 1 / -1;
+        --co_5-grid-row: 1 / span 2;
+        
+        --co_6-grid: 2fr minmax(3in, 1fr);
+        --co_6-profile-margin: var(--marginlarge) 0 var(--marginlarge) auto;
+        --co_6-bg-height: 100%;
+        --co_6-bg-width: calc(100% - 1.5in);
+        --co_6-margin: var(--l_r_negmargin);
+        
+        --co_7-grid: 1fr minmax(3in, 2fr) 2fr;
+        --co_7-imgoverlapmargin: unset;
+        --co_7-imgoverlapmargintop: unset;
+        
+        --te_2-padding: 0 4em;
+/*        */
+        --h_2-hide: none;
+        --cal_1-taskcolor: violet;
+        
+    }
+}
+
+/*==========  list properties  ==========*/
+.m_ct_1 {
+    columns: var(--col222x);
+    column-gap: var(--colgap);
+/*    column-fill: balance;*/
+}
+
+.m_ct_2 {
+    columns: var(--col332x);
+    column-gap: var(--colgap);
+    column-rule: var(--colrule);
+}
+
+.m_ct_3 {
+    columns: var(--col332x);
+    column-gap: var(--colgap);
+    column-rule: var(--colrule);
+}
+
+.m_l_1, .m_l_4col {
+    columns: var(--col432x);
+    column-gap: var(--colgap);
+    column-rule: var(--colrule);
+}
+
+.m_l_2 {
+    list-style-image: url(../img/lighting%2012px.svg);
+}
+.m_l_2 li {
+    margin-left: 1.5em;
+/*    list-style-position: inside;*/
+}
+
+.m_l_3 li {
+    margin-left: 1em;
+    padding-left: 0.3em;
+    list-style-type: decimal;
+}
+.m_l_3 li::marker {
+    font-family: 'roboto slab', serif;
+    font-weight: bold;
+    font-size: var(--h3);
+    color: var(--sw-10);
+}
+
+.m_l_4 {
+    columns: var(--col332x);
+    margin: var(--marginxl) 0;
+}
+.m_l_4 li + h3, .m_l_4 .colbreakinsideno {
+    margin-top: var(--marginlarge);
+}
+.m_l_4 li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: var(--marginsmall);
+}
+.service {
+/*    max-width: 60%;*/
+/*    width: max-content;*/
+/*    white-space: nowrap;*/
+}
+.dotleader {
+    flex: 1 0 1em;
+/*    background: red;*/
+/*    padding: 0 1em;*/
+    margin: 0 0.5em;
+    border-bottom: 3px dotted var(--sw-10);
+    margin-bottom: 0.4em;
+}
+.price {
+    font-family: 'roboto mono', monospace;
+}
+.price::before {
+    content: '$';
+    margin-right: 0.2em;
+}
+
+.m_l_5 {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginxl);
+}
+
+.m_l_6 {
+    display: grid;
+    grid-template-columns: var(--grid432a);
+    grid-gap: var(--marginxl);
+}
+.m_l_6 h3 {
+    margin: var(--marginlarge) 0 var(--margin);
+}
+
+.m_h_1 article {
+    width: 60%;
+    margin: var(--marginlarge) 0;
+}
+.m_h_2 {
+    display: flex;
+/*    justify-content: space-around;*/
+    justify-content: space-between;
+/*    justify-content: space-evenly;*/
+    align-items: center;
+    height: 400px;
+    padding-bottom: var(--marginlarge);
+    padding-top: var(--marginlarge);
+}
+/* possibly a component icon-nav along with m_te_2 below */
+.m_h_2 .icon-nav {
+    flex-shrink: 0;
+    margin: 0;
+/*    its center align auto margin interferes with flex container's justify-content */
+}
+
+.m_h_2 ul {
+    padding: var(--margin);
+/*    max-width: 800px;*/
+/*    flex items with no width/basis only uses fit-content*/
+    background-color: var(--sw-16);
+    columns: var(--col33xx);
+    column-gap: var(--marginxl);
+    column-rule: 1px solid var(--sw-10);
+    align-self: flex-end;
+}
+.m_h_2 li {
+    margin: 0;
+    flex: 1 1 auto;
+}
+.m_h_2 li.slideoff {
+    color: var(--sw-12);
+    display: var(--h_2-hide);
+}
+.m_h_2 h4 {
+    margin-bottom: 0;
+}
+.m_h_2 li p {
+    font-size: var(--h3);
+}
+
+.m_h_3 {
+    background: url(../vector/image.svg) no-repeat top / 100% calc(100% - 7rem);
+}
+.m_h_3 h1 {
+    margin: 2em 0;
+}
+.m_h_3 ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.m_h_container_flex {
+    display: flex;
+/*    h1 grows & pushes icon ul to the right, wraps when viewports become small. both aligned to center*/
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.m_h_container_flex h1 {
+   flex: 1 1 200px;
+/*    minimun 200px width, before wrap*/
+    padding: var(--marginlarge);
+}
+.m_h_4 ul {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+/*    justify-content: center;*/
+/*    flex container set to center, (content width only), grid justify has no effect */
+    grid-gap: 2px;
+/*    background: red;*/
+}
+.m_h_4 .icon-tile {
+    margin: 0;
+}
+.m_h_5 ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: calc(var(--icon-tile-size) * 4);
+/*    background: red;*/
+    flex-basis: calc(var(--icon-tile-size) * 3 + var(--icon-tile-margin) * 6);
+/*    fix flexbox bug - column direction container width doesn't increase to include wrapped columns*/
+    flex-shrink: 0;
+}
+
+.m_h_6 ul {
+    width: 96%;
+    max-width: 460px;
+    background-color: var(--sw-16);
+    padding: var(--marginxl) var(--marginlarge);
+}
+
+/**/
+.m_co_1 header {
+    display: flex;
+/*    justify-content: space-between;*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+.clientlogo {
+    max-height: var(--figurelogoh);
+}
+.m_co_1 .social {
+    margin-left: auto;
+}
+.m_co_1 > div, .m_co_grid222x {
+    display: grid;
+    grid-template-columns: var(--grid222a);
+    grid-gap: var(--marginxl);
+    margin-top: var(--marginlarge);
+}
+
+.m_co_3 > div {
+    display: grid;
+    grid-template-columns: var(--grid222x-fixed);
+    grid-gap: var(--marginlarge);
+}
+
+.m_co_4 > div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginxl);
+}
+.m_co_4 p {
+    margin: var(--margin) 0 var(--marginlarge);
+}
+
+.m_co_5 > div {
+    display: grid;
+    grid-template-columns: var(--grid5322co5);
+    grid-gap: var(--marginlarge);
+}
+.m_co_5 section {
+    grid-column: var(--co_5-grid-column);
+    grid-row: var(--co_5-grid-row);
+    position: relative;
+}
+.m_co_5 section img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - var(--marginxl));
+    height: calc(100% - var(--marginxl));
+    object-fit: fill;
+}
+.m_co_5 ul {
+    margin: 0 var(--marginxl) var(--marginxl) 0;
+    padding: var(--marginxl) var(--marginlarge);
+    background-color: var(--70transparent);
+    box-shadow: var(--boxshadow-card);
+    display: grid;
+    grid-template-columns: var(--grid222a);
+    grid-gap: var(--marginlarge);
+    position: relative;
+/*    z-index above img */
+}
+
+.m_co_6 > div {
+    display: grid;
+    grid-template-columns: var(--co_6-grid);
+    grid-gap: var(--marginxl);
+    align-items: center;
+}
+.m_co_6 section {
+/*    background: var(--co_6-bg);*/
+    margin-left: var(--co_6-margin);
+    position: relative;
+}
+.m_co_6 section img {
+    position: absolute;
+    height: var(--co_6-bg-height);
+    width: var(--co_6-bg-width);
+}
+.m_co_6 .profile {
+    margin: var(--co_6-profile-margin);
+    position: relative;
+/*    z-index above img */
+}
+
+.m_co_7 div {
+    --minfigureh: 300px;
+    display: grid;
+    grid-template-columns: var(--co_7-grid);
+    grid-gap: var(--marginlarge);
+    margin: 0 var(--l_r_negmargin);
+}
+.m_co_7 .imgbgcover {
+/*    margin-left: var(--l_r_negmargin);*/
+/*    min-height: 10em;*/
+    margin-right: var(--co_7-imgoverlapmargin);
+}
+.m_co_7 main {
+    padding: var(--marginxl) var(--marginlarge);
+    background-color: var(--sw-16);
+    margin-left: var(--co_7-imgoverlapmargin);
+    margin-top: var(--co_7-imgoverlapmargintop);
+}
+.m_co_7 .collage {
+    margin: 0 var(--margin);
+}
+
+.m_co_8 div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginxl);
+}
+.m_co_8 figure {
+    grid-row: span 2;
+}
+.m_co_8 article > * {
+    margin-bottom: var(--marginsmall);
+}
+.m_co_8 .btn-cta {
+    margin-top: var(--marginlarge);
+    margin-bottom: 0;
+}
+
+.m_cd_1 div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginlarge);
+    align-items: start;
+}
+.m_cd_1 .card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.m_cd_2 div {
+    columns: var(--col332x);
+    column-gap: var(--marginlarge);
+}
+.m_cd_2 div > * {
+    break-inside: avoid;
+}
+.m_cd_2 div > * + * {
+    margin-top: var(--marginlarge);
+}
+
+.m_cd_3 > div {
+    display: flex;
+    overflow: auto hidden;
+    padding-bottom: var(--marginxl);
+    margin-top: var(--marginxl);
+    align-items: center;
+}
+.m_cd_3 > div > * {
+    flex: 0 0 300px;
+    margin-right: 1em;
+}
+/* layout for flex scroll carousel in m_cd_3, m_g_3, m_tabs_2 */
+.negmargincontainer {
+    margin-left: var(--l_r_negmargin);
+    margin-right: var(--l_r_negmargin);
+}
+.negmargincontainer::before, .negmargincontainer::after {
+    content: '';
+    display: block;
+    width: calc(var(--l_r_negmargin) * -1);
+    height: 1px;
+/*    ::after doesn't show up without height somehow */
+    flex-shrink: 0;
+/*    background-color: red;*/
+}
+.scroll-end-sign.scroll-end-sign {
+/*    increase specificity */
+    flex-basis: auto;
+    margin: 0 0 0 var(--marginxl);
+}
+
+/*stretch to match the tallest item in row */
+.m_cd_3 .card-imgbg,
+.m_cd_3 .figimgcover {
+    align-self: stretch;
+}
+
+.m_g_1 > div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginlarge);
+}
+.m_g_1 figure {
+    min-height: calc(var(--minfigureh) * 1.5);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+/*    auto margin collapses the empty figure, must have width set*/
+    border: 8px solid var(--sw-15-5);
+    box-shadow: var(--boxshadow-card);
+    cursor: pointer;
+}
+.m_g_1 img {
+    transition: var(--02transition);
+}
+.m_g_1 figure::after {
+    content: 'tv';
+    font-family: 'material icons';
+    font-size: 32px;
+    line-height: 1;
+    display: block;
+    width: 3em;
+    height: 3em;
+    color: var(--sw-8);
+    background-color: var(--sw-15-5);
+    border-radius: var(--borderradiusround);
+    padding: 0.4em;
+    position: absolute;
+    right: -1.5em;
+    bottom: -1.5em;
+    transition: var(--02transition);
+}
+.m_g_1 figure:nth-of-type(2)::after {
+    content: 'tablet';
+}
+.m_g_1 figure:nth-of-type(3)::after {
+    content: 'phone_android';
+}
+.m_g_1 figure:hover, .m_g_1 figure:focus {
+    border-color: var(--sw-16);
+}
+.m_g_1 figure:is(:hover, :focus) img {
+    transform: scale(1.1);
+}
+.m_g_1 figure:hover::after, .m_g_1 figure:focus::after {
+    background-color: var(--sw-16);
+}
+
+.m_g_2 > div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginlarge);
+}
+.m_g_2 section > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: var(--marginlarge) var(--marginxl) 0;
+}
+.m_g_2 figure {
+    min-height: calc(var(--minfigureh) * 1.3);
+}
+
+.m_g_3 {
+/*    --minfigureh: 240px;*/
+}
+
+.m_g_4 {
+    padding: 0;
+    display: grid;
+    grid-template-columns: var(--grid5432gallery);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    max-height: var(--grid5432gallery-height);
+/*    hide additional 2 grid items with set height, otherwise hide these items directly. On devices with mouse as a main input a scrollbar appears throws off the height */
+    overflow: hidden;
+/*    grid-gap: 8px;*/
+}
+.m_g_4 .col2 {
+    grid-column: span 2;
+}
+.m_g_4 .row2 {
+    grid-row: span 2;
+}
+.m_g_4 .square {
+    padding-top: 100%;
+}
+.m_g_4 img {
+    top: 0;
+/*    squares have 100% padding-top*/
+}
+
+.m_f_1 form {
+    flex-basis: 400px;
+}
+
+.m_f_2 form {
+    flex-basis: 620px;
+}
+.m_f_2 form ul:first-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--margin) * -1);
+}
+.m_f_2 form li:not(.li-bullet) {
+    flex: 1 1 200px;
+    margin: 0 var(--margin);
+}
+.m_f_2 form li:last-child {
+    margin-top: var(--marginsmall);
+}
+/*specificity*/
+.m_f_2 .flex-400.flex-400 {
+    flex-basis: 500px;
+}
+.m_f_2 .flex-100.flex-100 {
+    flex-basis: 130px;
+}
+.m_f_2 select {
+    padding: calc(var(--margin) - 2px) var(--margin);
+/*    even height, it's taller */
+}
+.m_f_2 button {
+    margin: var(--marginlarge) 0 0 auto;
+}
+
+.m_te_1 .quote {
+    font-style: italic;
+}
+.m_te_1 .quote::before, 
+.m_te_1 .quote::after {
+    content: '\201c';
+    display: block;
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 0em;
+    margin-top: 0.8em;
+}
+.m_te_1 .quote::after {
+/*    margin: */
+    content: '\201d';
+    margin: 0.5em 0.2em 0 0;
+    text-align: right;
+}
+.m_te_1 footer {
+    display: flex;
+    align-items: center;
+}
+.m_te_1 footer > * {
+    font-size: inherit;
+}
+.m_te_1 footer i {
+    margin: 0;
+/*   auto margin from icon-round pushes <p> to the side */
+    flex-shrink: 0;
+}
+.m_te_1 footer p {
+    padding: 0 var(--marginlarge);
+}
+.m_te_1 cite {
+    display: block;
+    margin-bottom: var(--marginsmall);
+}
+.m_te_1 .style2 {
+    display: flex;
+    flex-direction: column-reverse;
+/*    background: linear-gradient(to bottom, rgba(255,255,255,0) calc(36px + var(--marginlarge)), var(--sw-16) 36px);*/
+    padding: var(--marginlarge);
+    background: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
+    margin-top: calc(var(--marginlarge) + 36px);
+}
+.m_te_1 .style2 .quote::after {
+    display: none;
+}
+.m_te_1 .style2 footer {
+    display: unset;
+    text-align: center;
+    margin-top: calc((var(--marginlarge) + 36px) * -1);
+}
+.m_te_1 .style2 footer i {
+    margin: 0 auto var(--marginsmall);
+}
+.m_te_1 .style3 .quote {
+    background: white;
+    padding: var(--marginlarge);
+}
+.m_te_1 .style3 div::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 2em;
+    transform: rotate(45deg);
+    margin: -1em var(--marginxl) 1em auto;
+    background-color: var(--sw-16);
+}
+.m_te_1 .style3 div {
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+.m_te_1 .style3 footer {
+    flex-direction: row-reverse;
+    padding-right: var(--margin);
+    text-align: right;
+}
+.m_te_1 > div {
+    display: grid;
+    grid-template-columns: var(--grid332a);
+    grid-gap: var(--marginxl);
+    align-items: center;
+}
+
+.m_te_2 div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*    icons' center align margin: 0 auto; interferes with flex alignment */
+}
+.m_te_2 .icon-nav {
+    flex: 0 0 auto;
+    margin-top: -1.3em;
+}
+.m_te_2 blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--te_2-padding);
+    order: var(--te_2-order);
+    flex: var(--te_2-flex);
+/*    
+    <768px order -1, flex-basis not define = auto - takes full width as long as there's enough text
+    >768 order 0, flex-basis 500px - allows 2 icons to stay on the same line, not wrap 
+    */
+}
+.m_te_2 .quote {
+    line-height: 1.6;
+    margin: var(--marginxl) 0;
+    text-align: left;
+}
+.m_te_2 .quote::before, .m_te_2 .quote::after {
+    content: open-quote;
+    font-weight: 900;
+    font-size: 2em;
+    margin-right: 0.5em;
+    line-height: 1;
+/*    16 * 2 = 32px */
+    line-height: var(--base-size);
+}
+.m_te_2 .quote::after {
+    content: close-quote;
+    vertical-align: bottom;
+    margin-left: 0.5em;
+}
+.m_te_2 h4:first-of-type {
+    margin: var(--marginxl) 0;
+}
+.m_te_2 h4:last-of-type {
+    margin-top: var(--marginxl);
+}
+
+.m_p_1 > div {
+    display: grid;
+    grid-template-columns: var(--gridpreview);
+    grid-gap: var(--marginlarge);
+/*    avoid gap property from being inherited by decendant flexbox */
+}
+.m_p_1 iframe {
+    width: 100%;
+    height: 600px;
+    border: 2px solid var(--sw-4);
+}
+.m_p_1 section div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 var(--marginlarge);
+    margin-bottom: var(--marginlarge);
+}
+
+.m_d_1 div {
+    display: grid;
+    grid-template-columns: var(--grid222a);
+    grid-gap: var(--marginlarge);
+}
+.m_d_1 .style1 details {
+    background-color: var(--sw-16);
+}
+.m_d_1 .style1 details + details {
+    margin-top: var(--marginsmall);
+}
+.m_d_1 .style1 summary {
+    background: url(../vector/expand.svg) no-repeat 16px center / 16px, var(--sw-14);
+/*    transition: var(--02transition);*/
+}
+.m_d_1 .style1  details[open] summary {
+    background-color: var(--sw-10);
+    color: var(--sw-16);
+    background-image: url(../vector/collapse.svg);
+}
+.m_d_1 .style2 details + details::before {
+    content: '';
+    display: block;
+/*    height: 1px;*/
+    border-top: 1px solid var(--sw-13);
+    margin: 2em 0;
+}
+.m_d_1 .style2 summary {
+    padding: 0 3em 0 0;
+    position: relative;
+}
+.m_d_1 .style2 p {
+    padding: 1em 3em 0 0;
+}
+.m_d_1 .style2 details summary::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../vector/dropdown%20arrow%2016px.svg) no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    right: 0.75em;
+    transition: var(--02transition);
+}
+.m_d_1 .style2 details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.m_t_1 div {
+    overflow-x: auto;
+}
+
+.m_t_2 div {
+    overflow-x: auto;
+/*    padding-bottom: var(--marginsmall);*/
+}
+.m_t_2 table {
+    margin-bottom: var(--marginlarge);
+}
+.m_t_2 col {
+    width: 20%;
+}
+.m_t_2 td, .m_t_2 th {
+    padding: var(--margin);
+    border: 1px var(--sw-12) solid;
+    vertical-align: middle;
+}
+.m_t_2 tbody td, .m_t_2 tfoot td {
+    background-color: var(--sw-16);
+}
+.m_t_2 th {
+    background-color: var(--sw-14);
+}
+.m_t_2 thead {
+        word-break: break-all;
+/*    long words can be wrapped */
+}
+.m_t_2 thead td:first-child {
+    border: none;
+    visibility: collapse;
+/*firefox has border-left problem with the cell*/
+}
+.m_t_2 tfoot {
+    border-top: 2px solid var(--sw-8);
+}
+@media screen and (max-width: 460px) {
+    .m_t_2 thead {
+        display: none;
+    }
+/*    double class to increase specificity (tbody td) */
+    .m_t_2.m_t_2 :is(table, tbody, tfoot, tr, th, td, caption) {
+        display: block;
+        padding: 0;
+        border: 0;
+        background-color: unset;
+    }
+    .m_t_2 tr + tr, .m_t_2 tfoot {
+        margin-top: var(--marginlarge);
+    }
+    .m_t_2 td:nth-child(2)::before {
+        content: "Rome: ";
+    }
+     .m_t_2 td:nth-child(3)::before {
+        content: "Athens: ";
+    }
+     .m_t_2 td:nth-child(4)::before {
+        content: "Carthage: ";
+    }
+     .m_t_2 td:nth-child(5)::before {
+        content: "Alexandria: ";
+    }
+}
+
+.m_ch_1 > div {
+    display: grid;
+    grid-template-columns: var(--gridchart);
+    grid-gap: var(--marginxl);
+/*    align-items: center;*/
+    align-items: start;
+}
+.m_ch_1 form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--marginxl);
+/*    align-content: flex-start;*/
+/*    align-content: stretch;*/
+/*    when grid container's align-items not set, flexbox (as a grid item set to flex, takes full height) has two items that wrap lines stretch to match the height of chart
+    grid no align-items set, use flex's align-content: flex-start
+    grid set to align-items: start, flex's align setting has no effect. 
+    */
+    background: unset;
+    box-shadow: unset;
+    padding: 0;
+}
+.m_ch_1 fieldset:last-child {
+    flex: 1 1 280px;
+}
+.m_ch_1 select {
+    padding: var(--marginsmall);
+}
+.m_ch_1 fieldset label {
+    margin-right: var(--marginlarge);
+}
+
+.m_cal_1 div {
+    display: grid;
+    grid-template-columns: var(--grid222x-fixed);
+    grid-gap: var(--marginxl);
+    align-items: center;
+}
+.m_cal_1 section {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
+}
+.m_cal_1 h3 {
+    text-align: center;
+    margin: 0;
+    padding: var(--marginlarge);
+}
+.m_cal_1 table {
+    table-layout: fixed;
+/*    Table and column widths are set by the widths of table and col elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.*/
+    border-collapse: separate;
+    border-spacing: 0;
+/*    border-spacing: 0px allows for padding when border-collapse: seperate */
+    padding: 0 var(--marginlarge) var(--marginlarge);
+}
+.m_cal_1 col {
+    width: 20%;
+}
+.m_cal_1 th {
+    text-align: center;
+    padding: var(--margin);
+}
+.m_cal_1 tbody {
+    counter-reset: calendardates 28;
+}
+.m_cal_1 tbody td {
+    text-align: center;
+    counter-increment: calendardates;
+    border: none;
+    font-size: var(--h3);
+    vertical-align: top;
+    overflow: visible;
+    padding: var(--margin) 0;
+}
+.m_cal_1 tbody td:nth-child(n+6) {
+/*    background: red;*/
+    visibility: collapse;
+    width: 0px;
+/*    padding: 0;*/
+}
+.m_cal_1 tbody td::before {
+    content: counter(calendardates);
+}
+.m_cal_1 .start {
+    counter-set: calendardates 1;
+}
+.m_cal_1 tbody tr:nth-child(1) td:nth-child(-n+2), .m_cal_1 tbody tr:nth-last-child(1) td:nth-child(n+5) {
+    color: var(--sw-12);
+}
+.m_cal_1 .task {
+    background-color: var(--cal_1-taskcolor);
+    display: block;
+    height: var(--marginsmall);
+    width: 40%;
+    margin: var(--marginsmall) 0 0 30%;
+    border-radius: var(--borderradiusround);
+}
+.m_cal_1 .taskcolor1 {
+    --cal_1-taskcolor: salmon;
+}
+.m_cal_1 .taskcolor2 {
+    --cal_1-taskcolor: lightblue;
+}
+.m_cal_1 .taskcolor3 {
+    --cal_1-taskcolor: lightpink;
+}
+.m_cal_1 .taskcolor4 {
+    --cal_1-taskcolor: lightgreen;
+}
+.m_cal_1 .taskplaceholder {
+    --cal_1-taskcolor: transparent;
+}
+.m_cal_1 .taskspan {
+    --number: 2;
+    width: calc(var(--number) * 100% + 40%)
+/*   default single marker is 30%margin + 40%width + 30%margin     */
+}
+.m_cal_1 li {
+    padding-left: var(--margin);
+    border-left: var(--marginsmall) solid var(--cal_1-taskcolor);
+}
+.m_cal_1 li > * {
+    margin-bottom: var(--marginsmall);
+}
+
+.m_tabs_1 ul {
+    display: flex;
+/*    justify-content: safe center;*/
+/*    overflow "safe" value isn't supported on Chrome */
+    background: linear-gradient(to top, var(--sw-12) 1px, var(--100transparent) 1px) content-box;
+    overflow-x: auto;
+    padding-bottom: var(--marginxl);
+    scrollbar-width: none; 
+}
+.m_tabs_1 ul::-webkit-scrollbar {
+    display: none;
+}
+
+.m_tabs_1 li {
+    flex-shrink: 0;
+}
+/* temporary fix for no-wrap flex container's justify-center: center with overflowing content (data loss) */
+.m_tabs_1 li:first-child {
+    margin-left: auto;
+}
+.m_tabs_1 li:last-child {
+    margin-right: auto;
+}
+.m_tabs_1 a {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    padding: var(--margin) var(--marginlarge);
+    position: relative;
+    overflow: hidden;
+}
+.m_tabs_1 a::before {
+    content: attr(title);
+    font-family: 'material icons';
+    font-size: 24px;
+    line-height: 16px;
+    margin-right: 0.3em;
+    vertical-align: top;
+}
+.m_tabs_1 a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    transition: var(--02transition);
+}
+.m_tabs_1 a:hover::after, .m_tabs_1 a:focus::after {
+    bottom: 0px;
+}
+
+.m_tabs_2 ul {
+    display: flex;
+    overflow-x: auto;
+    background: linear-gradient(to top, var(--sw-12) 1px, var(--100transparent) 1px) content-box;
+    padding-bottom: var(--marginxl);
+    scrollbar-width: none;
+}
+.m_tabs_2 ul::-webkit-scrollbar {
+    display: none;
+}
+.m_tabs_2 ul > * {
+    flex-shrink: 0;
+}
+.m_tabs_2 li+li {
+    margin-left: var(--marginxl);
+}
+.m_tabs_2 a {
+    display: block;
+    font-weight: bold;
+    padding: var(--margin) 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.m_tabs_2 a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: var(--borderradiusround);
+    background-color: currentColor;
+    position: absolute;
+    bottom: -8px;
+    transition: var(--02transition);
+}
+.m_tabs_2 a:hover::after {
+    bottom: -4px;
+}
+
+.m_bc_1 li {
+    display: inline-block;
+}
+.m_bc_1 li + li::before {
+    content: '\2044';
+    margin: 0 var(--margin);
+    color: var(--sw-13);
+    font-weight: bold;
+}
+.m_bc_1 li:nth-child(-n+3) a {
+/*    color: var(--sw-4);*/
+}
+
+
+@media print {
+    
+    
+}
+

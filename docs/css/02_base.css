@@ -1,0 +1,248 @@
+/*03_components.css includes settings for generic html elements: sizing, spacing and layout */
+
+/*==========  border box  ==========*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*==========  spacing custom properties  ==========*/
+@media screen {
+    :root {
+        --padding: 32px 16px;
+        --l_r_negmargin: -16px;
+        --paddingnav: 2px 32px;
+        --marginsmall: 0.3em;
+        --margin: 0.6em;
+        --marginlarge: 1.2em;
+        --marginxl: 1.8em;
+        --minfigureh: 200px;
+        --borderradiusround: 999px;
+    }
+}
+
+@media screen and (min-width: 460px) {
+    :root {
+        --padding: 32px 32px;
+        --l_r_negmargin: -32px;
+        --marginsmall: 0.35em;
+        --margin: 0.7em;
+        --marginlarge: 1.4em;
+        --marginxl: 2.1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --padding: 48px;
+        --l_r_negmargin: -48px;
+        --paddingnav: 2px 48px;
+        --marginsmall: 0.4em;
+        --margin: 0.8em;
+        --marginlarge: 1.6em;
+        --marginxl: 2.4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --padding: 64px;
+        --l_r_negmargin: -64px;
+        --paddingnav: 2px 64px;
+/*        --marginsmall: 0.45em;*/
+/*        --margin: 0.9em;*/
+/*        --marginlarge: 1.8em;*/
+/*        --marginxl: 2.7em;*/
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :root {
+        --padding: 64px 96px;
+        --l_r_negmargin: -96px;
+/*        --paddingnav: 2px 96px;*/
+    }
+}
+
+@media print {
+    :root {
+        --padding: 0.25in 0in;
+        --paddingnav: 0.05in 0.25in;
+        --l_r_negmargin: 0in;
+        --marginsmall: 0.05in;
+        --margin: 0.075in;
+        --marginlarge: 0.15in;
+        --marginxl: 0.25in;
+        --minfigureh: 1.5in;
+        --borderradiusround: 999pt;
+    }
+}
+
+
+/*==========  generic elements settings  ==========*/
+body > * {
+    padding: var(--padding);
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: var(--marginlarge);
+}
+
+h1,
+h3,
+h4,
+p,
+dd {
+    margin: 0;
+    margin-bottom: var(--margin);
+}
+
+li h3 {
+    margin-bottom: var(--marginsmall);
+/*    color: red;*/
+}
+
+li + li {
+    margin-top: var(--marginlarge);
+}
+
+:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    break-inside: avoid;
+}
+
+
+dt {
+    margin-bottom: 1em;
+}
+img {
+    max-width: 100%;
+}
+figure {
+    margin: 0;
+    min-height: var(--minfigureh);
+}
+/*
+figure > img {
+    display: block;
+}
+*/
+blockquote {
+    margin: 0;
+}
+/*==========  html form  ==========*/
+form {
+    background: var(--sw-15);
+    padding: var(--marginxl) var(--marginlarge);
+    box-shadow: var(--boxshadow-card);
+}
+label,
+legend {
+    display: block;
+    font-weight: 900;
+    margin-bottom: var(--margin);
+    color: var(--sw-4);
+}
+input[type="text"], 
+input[type="email"],
+input[type="password"],
+select,
+input[type="date"] {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    padding: var(--margin);
+    border: 1px solid var(--sw-13);
+    margin-bottom: var(--marginlarge);
+    color: var(--sw-4);
+}
+select {
+    max-width: 200px;
+}
+input::placeholder {
+    color: var(--sw-12);
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: var(--marginsmall);
+}
+fieldset label {
+    display: inline-block;
+    margin-right: var(--marginxl);
+    font-weight: normal;
+}
+fieldset label:last-child {
+    margin-right: 0;
+}
+form button {
+    display: block;
+    padding: 0.6em 1.6em;
+    border: 0;
+    border-radius: var(--borderradiusround);
+    width: fit-content;
+    font-weight: bold;
+    background-color: var(--sw-8);
+    color: var(--sw-16);
+    transition: all 0.2s ease-in-out;
+    margin: var(--margin) auto 0;
+    cursor: pointer;
+}
+form button:hover {
+    background: var(--sw-6);
+}
+form .specificity {
+/*    margin-bottom: var(--marginlarge);*/
+}
+
+
+/*================= details ====================*/
+
+summary::-webkit-details-marker {
+/*    display: none; */
+/*    march 2021 chrome supports summary as a list item - use display: block, or list-style: none to remove triangle */
+}
+summary {
+    font-weight: bold;
+    padding: 1em 2em 1em 3em;
+    cursor: pointer;
+    list-style: none;
+}
+details p {
+    padding: 1em 2em 1em 3em;
+}
+/*================= table ====================*/
+table {
+/*    border: 1px solid red;*/
+    width: 100%;
+    border-collapse: collapse;
+}
+caption {
+    text-align: left;
+    margin-bottom: var(--marginlarge);
+}
+td, th {
+    padding: var(--marginlarge) var(--margin);
+    text-align: left;
+}
+tbody td {
+    border-top: 1px solid var(--sw-14);
+}
