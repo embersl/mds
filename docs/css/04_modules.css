@@ -14,7 +14,7 @@
         
         --co_5-grid-column: 1 / -1;
         
-        --co_6-profile-margin: 20vw auto 0;
+        --co_6-profile-margin: 30vw auto 0;
         --co_6-bg-height: 50vw;
         --co_6-bg-width: 100%;
         
@@ -445,22 +445,22 @@
 }
 
 .m_co_7 div {
-    --minfigureh: 300px;
     display: grid;
     grid-template-columns: var(--co_7-grid);
     grid-gap: var(--marginlarge);
     margin: 0 var(--l_r_negmargin);
 }
-.m_co_7 .imgbgcover {
-/*    margin-left: var(--l_r_negmargin);*/
-/*    min-height: 10em;*/
+.m_co_7 figure {
+    min-height: calc(var(--minfigureh) * 1.5);
     margin-right: var(--co_7-imgoverlapmargin);
 }
 .m_co_7 main {
     padding: var(--marginxl) var(--marginlarge);
-    background-color: var(--sw-16);
+    background-color: var(--sw-15-5);
     margin-left: var(--co_7-imgoverlapmargin);
     margin-top: var(--co_7-imgoverlapmargintop);
+    position: relative;
+/*    z-index above figure */
 }
 .m_co_7 .collage {
     margin: 0 var(--margin);
@@ -965,6 +965,9 @@
 }
 .m_ch_1 fieldset label {
     margin-right: var(--marginlarge);
+}
+.m_ch_1 figure img {
+    max-height: 500px;
 }
 
 .m_cal_1 div {

@@ -297,13 +297,14 @@
 }
 .collage img {
     position: absolute;
-    width: 80%;
-    height: 60%;
+    width: min(80%, 400px);
+    height: min(60%, 300px);
     object-fit: fill;
 }
 .collage img:nth-child(3) {
     top: 0;
     left: 10%;
+    left: calc((100% - min(80%, 400px)) / 2);
 }
 .collage img:nth-child(2) {
     right: 0;
@@ -311,7 +312,7 @@
 }
 .collage img:nth-child(1) {
     left: 0;
-    top: 20%;
+    top: calc((100% - min(60%, 300px)) / 2);
 }
 .card {
 /*    max-width: 500px;*/
