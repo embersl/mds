@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home - Modular Design System</title>
+    <meta name="description" content="This is a collection of modular components for internal projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="vector/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/10_homepage.css">
+</head>
+
+<body>
+    <nav id="navbar" class="nav">
+        <ul>
+            <li><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="demo.html">Modules</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="welcome padding">
+            <h1 class="center">Welcome to Modular Design System</h1>
+            <ul class="stats">
+                <li><i class="material-icons">schedule</i><b>Latest release: </b>2021-04-15</li>
+                <li><i class="material-icons">source</i><b>Code name :</b> Chimera</li>
+                <li><i class="material-icons">dashboard_customize</i><b>Modules: </b>47, in 11 groups</li>
+                <li><i class="material-icons">people</i><b>Contributors: </b>1</li>
+                <li><i class="material-icons">color_lens</i><b>Projects tested: </b>3</li>
+                <li><i class="material-icons">phone_android</i><b>Viewports: </b>responsive + print</li>
+            </ul>
+            <ul class="pagelinks">
+                <li><a href="#intro">What is MSD</a></li>
+                <li><a href="#demo">Module List</a></li>
+                <li><a href="#visual">Visual</a></li>
+                <li><a href="#collaboration">Collaboration</a></li>
+                <li><a href="#interaction">Interaction</a></li>
+                <li><a href="#m_cd_3">Use Cases</a></li>
+            </ul>
+        </section>
+        <section id="intro" class="intro">
+            <picture>
+                <source srcset="vector/homepage/art.png" media="(min-width: 768px)">
+                <img src="vector/homepage/form.png" alt="image name">
+            </picture>
+            <article class="padding">
+                <div class="colbreakinsideno">
+                    <h2 class="center">What's Modular Design System?</h2>
+                    <p>The design system is a collection of web modules created for various content strategies and scenarios. Each module comprises smaller web components that may be shared with other modules. Together they provide a consistent, modular and adaptive visual presentation. With modifications and customizations, the design system offers an efficient approach to common design tasks.</p>
+                </div>
+                <div class="colbreakinsideno">
+                    <h2 class="center">Where do I find this MDS</h2>
+                    <p class="li-bullet">A pdf reference contains categorized modules and their responsive design variations.</p>
+                    <p class="li-bullet">A companion html/css file gives real world experience in browsers. See demo at https://embersl.github.io/mds/</p>
+                    <p class="li-bullet">A example library provides some example usages.</p>
+                </div>
+            </article>
+        </section>
+        <section id="demo" class="demo padding">
+            <h2 class="center">Module Demo</h2>
+            <ul>
+                <li>
+                    <h4>Content Modules</h4>
+                    <a href="demo.html#ct_1">CT_1 &bull; Content 2-Col</a>
+                    <a href="demo.html#ct_2">CT_2 &bull; Content 3-Col</a>
+                    <a href="demo.html#ct_3">CT_3 &bull; Content 3-Col</a>
+                </li>
+                <li>
+                    <h4>List Modules</h4>
+                    <a href="demo.html#l_1">L_1 &bull; List Standard 4-Col</a>
+                    <a href="demo.html#l_2">L_2 &bull; List Custom Bullet 4-Col</a>
+                    <a href="demo.html#l_3">L_3 &bull; List Numbered 4-Col</a>
+                    <a href="demo.html#l_4">L_4 &bull; List Pricing 3-Col</a>
+                    <a href="demo.html#l_5">L_5 &bull; List Icons 3-Col</a>
+                    <a href="demo.html#l_6">L_6 &bull; List Icons 4-Col</a>
+                </li>
+
+                <li>
+                    <h4>Hero Image Modules</h4>
+                    <a href="demo.html#h_1">H_1 &bull; Hero Image Header</a>
+                    <a href="demo.html#h_2">H_2 &bull; Hero Image Slide</a>
+                    <a href="demo.html#h_3">H_3 &bull; Hero Icon Image</a>
+                    <a href="demo.html#h_4">H_4 &bull; Hero Icon Image 2</a>
+                    <a href="demo.html#h_5">H_5 &bull; Hero Icon Image 3</a>
+                    <a href="demo.html#h_6">H_6 &bull; Hero Icon List Image</a>
+                </li>
+
+                <li>
+                    <h4>Combo Modules</h4>
+                    <a href="demo.html#co_1">CO_1 &bull; Combo Intro 2-Col</a>
+                    <a href="demo.html#co_2">CO_2 &bull; Combo Image 2-Col</a>
+                    <a href="demo.html#co_3">CO_3 &bull; Combo List 2-Col</a>
+                    <a href="demo.html#co_4">CO_4 &bull; Combo Image 3-Col</a>
+                    <a href="demo.html#co_5">CO_5 &bull; Combo Image List 4-Col</a>
+                    <a href="demo.html#co_6">CO_6 &bull; Combo Card List 3-Col</a>
+                    <a href="demo.html#co_7">CO_7 &bull; Combo Collage 2-Col</a>
+                    <a href="demo.html#co_8">CO_8 &bull; Combo Image List 3-Col</a>
+                </li>
+
+                <li>
+                    <h4>Card Modules</h4>
+                    <a href="demo.html#cd_1">CD_1 &bull; Card 3-Col</a>
+                    <a href="demo.html#cd_2">CD_2 &bull; Card Tile 3-Col</a>
+                    <a href="demo.html#cd_3">CD_3 &bull; Card Carousel 4-Col</a>
+                    <a href="">CD_4 &bull; Card Grid 4-Col</a>
+                </li>
+
+                <li>
+                    <h4>Gallery Modules</h4>
+                    <a href="demo.html#g_1">G_1 &bull; Gallery Device 3-Col</a>
+                    <a href="demo.html#g_2">G_2 &bull; Gallery Project 3-Col</a>
+                    <a href="demo.html#g_3">G_3 &bull; Gallery Carousel 4-Col</a>
+                    <a href="demo.html#g_4">G_4 &bull; Gallery Grid</a>
+                    <a href="">G_5 &bull; Annotation</a>
+                    <a href="">G_6 &bull; Image Comparison</a>
+                </li>
+
+                <li>
+                    <h4>Form & Input Modules</h4>
+                    <a href="demo.html#f_1">F_1 &bull; Form Simple</a>
+                    <a href="demo.html#f_2">F_2 &bull; Form Complex</a>
+                </li>
+
+                <li>
+                    <h4>Testimony Modules</h4>
+                    <a href="demo.html#te_1">TE_1 &bull; Testimony</a>
+                    <a href="demo.html#te_2">TE_2 &bull; Testimony Full W</a>
+                </li>
+
+                <li>
+                    <h4>Embedded Content Modules</h4>
+                    <a href="demo.html#p_1">P_1 &bull; Preview</a>
+                    <a href="demo.html#d_1">D_1 &bull; Expansion & Detail</a>
+                </li>
+
+                <li>
+                    <h4>Data Modules</h4>
+                    <a href="demo.html#t_1">T_1 &bull; Table Row</a>
+                    <a href="demo.html#t_2">T_2 &bull; Table Col & Row</a>
+                    <a href="demo.html#ch_1">CH_1 &bull; Chart</a>
+                    <a href="demo.html#cal_1">CAL_1 &bull; Calendar</a>
+                </li>
+
+                <li>
+                    <h4>Navigational Modules</h4>
+                    <a href="">Nav_1 &bull; Top Nav</a>
+                    <a href="demo.html#tabs_1">Tabs_1 &bull; Tabs</a>
+                    <a href="demo.html#tabs_2">Tabs_2 &bull; Tabs Scroll</a>
+                    <a href="demo.html#bc_1">BC_1 &bull; Breadcrumb</a>
+                </li>
+            </ul>
+        </section>
+        <section id="visual" class="visual">
+            <picture>
+                <source srcset="vector/homepage/visual_composition.png" media="(min-width: 768px)">
+                <img src="vector/homepage/visual_composition.png" alt="img name">
+            </picture>
+            <ul class="padding">
+                <h2 class="center">Visual</h2>
+                <li>
+                    <h4>Minimal styling</h4>
+                    <p>A clean wireframe feel allows for complete focus on concept, strategy and problem solving without visual distractions.</p>
+                </li>
+                <li>
+                    <h4>Functions</h4>
+                    <p>The collection covers a wide range of components and usages for most common design tasks. Designed with clear structure and hierarchy in mind.</p>
+                </li>
+                <li>
+                    <h4>Consistent look</h4>
+                    <p>Universal formatting & sizing & spacing across all modules and components. Visual customization(color scheme, fonts, imageries) made easy.</p>
+                </li>
+                <li>
+                    <h4>Responsive layout</h4>
+                    <p>Modules are optimized for multiple screens and input mechanisms, such as desktop, tablet, mobile devices. Visual mockups available for all 3 viewport breakpoints</p>
+                </li>
+                <li>
+                    <h4>Versatile</h4>
+                    <p>Find inspirations, mix & match, customize and repurpose the components to suit the project’s needs.</p>
+                </li>
+                <li>
+                    <h4>Editorial Styling</h4>
+                    <p>Styled headers like H1~H5 help identify the outline & hierarchy. Let the logical and meaningful structure of the content guide viewers through the experience. </p>
+                </li>
+
+                <li>
+
+            </ul>
+        </section>
+        <section id="collaboration" class="collaboration padding">
+            <h2 class="center">Collaboration</h2>
+            <div>
+                <article>
+                    <p>Team members can build common vocabulary for visual components and layouts. Within the creative team people can better allocate responsibilities and prototype design options fast. When working with marketing team we can potentially communicate better by providing examples and use cases before we start doing actual design. </p>
+                    <h4>Copywriter</h4>
+                    <p>Review the modules and identify the parts that will be populated with the copy such as headings, sub-heads, captions, quotes, body text etc. Understanding the pattern, repetition and relationship among the content is beneficial - with outline/ structure, visual arrangement, word counts in mind, it’s easier to optimize the content and reduce rounds of changes.</p>
+                    <h4>Designer</h4>
+                    <p>Use the design system as a source of inspiration, and a start point for more interesting and complex creations. </p>
+                    <h4>Stakeholder</h4>
+                    <p>visualize the outcome and build realistic expectation, understand product experience and responsive behaviors, potentially get more involved in the team input process and identify problems early.</p>
+                </article>
+                <figure>
+                    <img src="vector/homepage/collaboration.png" alt="collaboration">
+                </figure>
+            </div>
+        </section>
+        <section id="interaction" class="interaction">
+            <figure>
+                <img src="vector/homepage/new_modules_1344.png" alt="placeholder">
+                <img src="vector/homepage/new_modules_896.png" alt="placeholder">
+                <img src="vector/homepage/new_modules_448.png" alt="placeholder">
+            </figure>
+            <article class="padding">
+                <h2 class="center">Interaction</h2>
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="vector/homepage/responsive.png" alt="placeholder">
+                        </figure>
+                        <h4>Responsive</h4>
+                        <p>Fluid design adapts to different screen properties and user input mechanisms on both desktop and mobile devices.</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="vector/homepage/form.png" alt="placeholder">
+                        </figure>
+                        <h4>Web forms</h4>
+                        <p>Html web form inputs provide good interaction experience across broswers and platforms.</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="vector/homepage/microtransition.png" alt="placeholder">
+                        </figure>
+                        <h4>Microinteractions</h4>
+                        <p>Subtle changes and animations serve as hints for people who use mouse, keyboard or touch screen to browse the web.</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="vector/homepage/print.png" alt="placeholder">
+                        </figure>
+                        <h4>Print styles</h4>
+                        <p>Dedicated print optimization css that makes printed pages come out fast, look good and stay authentic to the original design.</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="m_cd_3" class="m_cd_3 padding">
+            <h2 class="center">Use Cases</h2>
+            <p class="center"><i class="material-icons">touch_app</i> Scroll horizontally to see all items displayed below</p>
+            <div class="negmargincontainer">
+                <figure class="figimgcover"><img src="vector/homepage/usecase/banfield.png" alt="Image Description"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/calendar_v3.png" alt="Image Description"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/caselist_composition.jpg" alt="Image Description"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/casestudy_composition_airbnb.jpg"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/casestudy_composition_wacom.jpg" alt="Image Description"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/casestudy_composition_banfiled.jpg" alt="Image Description"></figure>
+                <figure class="figimgcover"><img src="vector/homepage/usecase/caselist_composition2.jpg" alt="Image Description"></figure>
+                <article class="scroll-end-sign">
+                    <i class="material-icons icon-round">amp_stories</i>
+                    <p class="center">The end</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer padding">&copy;2021 A TLI design project</footer>
+    <script src="css/nav.js"></script>
+</body>
+
+</html>

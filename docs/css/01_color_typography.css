@@ -1,0 +1,167 @@
+/* 01_color_typography.css includes color, type(body, h1-h4, etc), alignment settings */
+
+/*==========  color custom properties  ==========*/
+:root {
+    --sw-0: #000000;
+    --sw-0-5: #080808;
+    --sw-1: #101010;
+    --sw-2: #202020;
+    --sw-3: #303030;
+    --sw-4: #404040;
+    --sw-5: #505050;
+    --sw-6: #606060;
+    --sw-7: #707070;
+    --sw-8: #808080;
+    --sw-9: #8f8f8f;
+    --sw-10: #9f9f9f;
+    --sw-11: #afafaf;
+    --sw-12: #bfbfbf;
+    --sw-13: #cfcfcf;
+    --sw-14: #dfdfdf;
+    --sw-15: #efefef;
+    --sw-15-5: #f7f7f7;
+    --sw-16: #ffffff;
+    --70transparent: #ffffffbb;
+    --100transparent: #ffffff00;
+}
+
+/*==========  text custom properties  ==========*/
+:root {
+    --base-size: 16px;
+    --scale-ratio: 1.2;
+    --fine-print: calc(var(--base-size) / var(--scale-ratio));
+/*    --h5: calc(var(--base-size) * var(--scale-ratio));*/
+    --h4: var(--base-size);
+    --h3: calc(var(--h4) * var(--scale-ratio));
+    --h2: calc(var(--h3) * var(--scale-ratio));
+    --h1: calc(var(--h2) * var(--scale-ratio));
+}
+@media print {
+    :root {
+        --base-size: 8pt;
+        --scale-ratio: 1.1;
+    }
+}
+
+/*==========  generic block type settings  ==========*/
+html {
+    color: var(--sw-2);
+}
+body {
+    font-family: 'roboto', helvetica, arial, sans-serif;
+    font-size: var(--base-size);
+}
+
+h1 {
+    font-size: var(--h1);
+    font-weight: 900;   
+}
+
+h2 {
+    font-size: var(--h2);
+    font-weight: 900; 
+}
+
+h3 {
+    font-family: 'roboto slab', georgia, sans-serif;
+    font-size: var(--h3);
+    font-weight: 500; 
+}
+
+h4 {
+    font-size: var(--h4);
+    font-weight: 900; 
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+footer > * {
+/*    keep footer container margin 1em = 16px */
+    font-size: var(--fine-print);
+}
+
+/*==========  generic inline type settings  ==========*/
+a {
+    text-decoration: none;
+    color: var(--sw-8);
+    transition: var(--02transition);
+}
+a:hover, a:focus {
+    color: var(--sw-5);
+}
+em {
+    font-family: georgia, serif;
+    font-style: italic;
+}
+cite {
+    font-family: 'roboto slab', serif;
+    font-style: normal;
+    font-weight: 500;
+}
+q {
+    
+}
+sup {
+    font-weight: 900;
+}
+
+/*==========  .class type settings  ==========*/
+.social {
+    font-family: "social";
+    font-size: 2em;
+    white-space: nowrap;
+}
+.social > * {
+    margin: 0.5em;
+}
+.material-icons {
+    vertical-align: middle;
+}
+.serif {
+/*    for h3*/
+    font-family: georgia, serif;
+    text-transform: capitalize;
+    letter-spacing: unset;
+}
+.sansserif {
+    font-family: 'roboto';
+    font-weight: bold;
+}
+.byline {
+    display: block;
+    text-align: center;
+}
+.paragraphrule {
+    max-width: 33%;
+    margin: var(--marginlarge) auto;
+}
+.quote {
+    font-style: italic;
+}
+/*==========  .class alignment  ==========*/
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
+/*==========  generic color settings  ==========*/
+body {
+    background-color: var(--sw-16);
+}
+body > *:nth-child(odd) {
+    background-color: var(--sw-15);
+}
+body > *:nth-child(even) {
+    background-color: var(--sw-15-5);
+}
+
+@media print {
+    body > * + * {
+        border-top: 0.25pt solid var(--sw-14);
+    }
+    body > * {
+        break-inside: avoid;
+    }
+}
