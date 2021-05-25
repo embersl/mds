@@ -1,4 +1,4 @@
-/*color & type */
+/*========== color & type ==========*/
 :root {
     --sw-14-5: #e8e8e8;
 }
@@ -18,22 +18,22 @@ a {
 a:hover, a:focus {
     color: var(--sw-2);
 }
+h1 {
+    margin: var(--margin) 0 var(--marginxl);
+}
+h4 {
+    margin-bottom: var(--marginsmall);
+    text-transform: unset;
+    letter-spacing: unset;
+}
 .intro, .interaction {
     background-color: var(--sw-14-5);
 }
 .demo, .visual, .m_cd_3 {
     background-color: var(--sw-15);
 }
-h1 {
-    margin: var(--margin) 0 var(--marginxl);
-}
-h4 {
-    text-transform: unset;
-    letter-spacing: unset;
-    margin-bottom: var(--marginsmall);
-}
 
-/*base*/
+/*========== base ==========*/
 body > * {
     padding: unset;
 }
@@ -42,7 +42,7 @@ li + li {
     margin-top: unset;
 }
 picture img {
-    width: 100%;
+/*    width: 100%;*/
 }
 .padding {
     padding: var(--padding);
@@ -53,8 +53,8 @@ picture img {
 
 /* module */
 
-.welcome li+li {
-    margin-top: var(--margin);
+.welcome .stats li + li {
+    margin-top: var(--marginlarge);
 }
 .welcome .stats {
     columns: 220px 3;
@@ -62,19 +62,24 @@ picture img {
 }
 .welcome .material-icons {
     margin-right: var(--marginsmall);
+    vertical-align: text-bottom;
 }
 .welcome .pagelinks {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: var(--marginxl);
+    margin: calc(var(--marginlarge) * 2) 0 var(--marginlarge);
     justify-content: space-around;
 /*    font-weight: bold;*/
 }
 .pagelinks li {
-    margin: 1em 2em;
+    margin: 1em;
 }
-
+.intro img {
+    max-height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
 .intro article {
     columns: 300px 2;
     column-gap: var(--marginxl);
@@ -97,14 +102,29 @@ picture img {
     display: block;
     margin-bottom: var(--marginsmall);
 }
-
+.demo a[href]::after {
+    content: "";
+/*    prevent print css from generating "(url)" */
+}
+.visual img {
+    max-height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
 .visual ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: var(--marginxl);
+    break-inside: avoid;
+/*    print spacing bug */
 }
-.visual h2 {
+
+@media screen and (min-width: 460px) {
+    .visual ul {
+     grid-template-columns: 1fr 1fr;   
+    }
+    .visual h2 {
     grid-column: span 2;
+}
 }
 @media screen and (min-width: 768px) {
     .visual ul {
@@ -123,8 +143,8 @@ picture img {
     align-items: center;
 }
 .collaboration img {
-    max-height: 500px;
     display: block;
+    max-height: 500px;
     margin: 0 auto;
     
 }
@@ -136,12 +156,12 @@ picture img {
     align-items: flex-start;
 }
 .interaction > figure {
+    margin: var(--marginxl) 0;
     flex-basis: 300px;
     flex-grow: 1;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-gap: var(--margin);
-    margin: var(--marginxl) 0;
 }
 .interaction > figure > img:first-child {
     grid-column: span 2;
@@ -179,7 +199,7 @@ picture img {
     }
 }
 
-.m_cd_3 figure{
+.m_cd_3 figure {
     height: 500px;
     width: 400px;
     flex-basis: auto;
@@ -187,8 +207,9 @@ picture img {
 .m_cd_3 img {
     object-fit:cover;
     object-position: top left;
-    transition: var(--02transition);
     border: 1px solid var(--sw-12);
+    transition: var(--02transition);
+
 } 
 .m_cd_3 img:is(:hover, :focus) {
     object-position: bottom right;
@@ -199,3 +220,34 @@ picture img {
     color: var(--sw-14);
 }
 
+@media print {
+    body {
+        padding-top: unset;
+    }
+    body > * {
+        break-inside: unset;
+    }
+    .visual ul {
+    grid-template-columns: 1fr 2fr 2fr;
+    }
+    .visual h2 {
+    grid-row: span 3;
+    grid-column: unset;
+    }
+    .interaction > figure > img:is(:first-child, :nth-child(2)) {
+        height: 3in;
+    }
+    .interaction > figure > img:nth-child(3) {
+        height: 3in;
+        width: 100%;
+        object-fit: cover;
+    }
+    .interaction > article {
+    margin-left: var(--marginxl);
+    }
+    .m_cd_3 figure {
+        width: 24%;
+        height: 3in;
+    }
+    
+}

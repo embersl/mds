@@ -132,7 +132,7 @@
         --col432x: 1in 4; 
         --col332x: 2in 3;
         --col222x: 3in 2;
-        --colrule: 0.25pt dashed var(--sw-12);
+        --colrule: 0.2pt dashed var(--sw-12);
         
         
 /*        module specific elements */
@@ -162,6 +162,64 @@
         --cal_1-taskcolor: violet;
         
     }
+}
+
+/*==========  nav bar  ==========*/
+
+.nav.nav {
+    padding: 0 calc(var(--l_r_negmargin) * -1);
+    box-shadow: var(--boxshadow-card);
+    background-color: var(--sw-16);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    transition: top 0.2s 0.4s ease-in-out;
+    overflow: hidden;
+}
+.nav ul {
+    display: flex;
+    height: 48px;
+/*    align-items: flex-end;*/
+/*    align-items: flex-start;*/
+    align-items: center;
+}
+.nav li:first-child {
+    margin-right: auto;
+}
+.nav li+li {
+    margin-top: unset;
+    margin-left: 2em;
+}
+.nav img {
+    height: 32px;
+    vertical-align: text-bottom;
+}
+.nav span {
+    font-size: var(--h2);
+    display: inline-block;
+    margin: 0 0 0 0.5em;
+    padding-top: 10px;
+    color: var(--sw-8);
+}
+.nav .navhover {
+    position: relative;
+    display: block;
+    padding-top: 4px;
+}
+.nav .navhover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    border-radius: var(--borderradiusround);
+    background-color: currentColor;
+    position: absolute;
+    bottom: -21px;
+    transition: var(--02transition);
+}
+.nav .navhover:hover::after {
+    bottom: -16px;
 }
 
 /*==========  list properties  ==========*/
@@ -515,6 +573,9 @@
     flex: 0 0 300px;
     margin-right: 1em;
 }
+.m_cd_3 .material-icons {
+    vertical-align: text-bottom;
+}
 /* layout for flex scroll carousel in m_cd_3, m_g_3, m_tabs_2 */
 .negmargincontainer {
     margin-left: var(--l_r_negmargin);
@@ -816,6 +877,7 @@
     margin: 0 auto;
     height: 600px;
     border: 1px solid var(--sw-8);
+    overflow: hidden;
 }
 .m_p_1 section div {
     display: flex;
@@ -1173,10 +1235,3 @@
 .m_bc_1 li:nth-child(-n+3) a {
 /*    color: var(--sw-4);*/
 }
-
-
-@media print {
-    
-    
-}
-

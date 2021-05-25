@@ -156,12 +156,3 @@ body > *:nth-child(odd) {
 body > *:nth-child(even) {
     background-color: var(--sw-15-5);
 }
-
-@media print {
-    body > * + * {
-        border-top: 0.25pt solid var(--sw-14);
-    }
-    body > * {
-        break-inside: avoid;
-    }
-}
