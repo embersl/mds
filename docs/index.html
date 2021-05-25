@@ -6,6 +6,7 @@
     <title>Home - Modular Design System</title>
     <meta name="description" content="This is a collection of modular components for internal projects">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SL">
     <link rel="icon" type="image/png" href="vector/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/10_homepage.css">
@@ -14,9 +15,9 @@
 <body>
     <nav id="navbar" class="nav">
         <ul>
-            <li><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="demo.html">Modules</a></li>
+            <li><a href="http://embersl.github.io/mds/"><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></a></li>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="demo.html" class="navhover">Modules</a></li>
         </ul>
     </nav>
     <main>
@@ -42,17 +43,17 @@
         <section id="intro" class="intro">
             <picture>
                 <source srcset="vector/homepage/art.png" media="(min-width: 768px)">
-                <img src="vector/homepage/form.png" alt="image name">
+                <img src="vector/homepage/art.png" alt="MDS intro banner">
             </picture>
             <article class="padding">
                 <div class="colbreakinsideno">
                     <h2 class="center">What's Modular Design System?</h2>
-                    <p>The design system is a collection of web modules created for various content strategies and scenarios. Each module comprises smaller web components that may be shared with other modules. Together they provide a consistent, modular and adaptive visual presentation. With modifications and customizations, the design system offers an efficient approach to common design tasks.</p>
+                    <p>The Modular Design System is a collection of web modules created for various content and design strategies. Each module comprises components that may be shared with other modules. Together they provide a consistent, unified and adaptive visual presentation. With easy modification and customization, the system offers an efficient approach to common design tasks.</p>
                 </div>
                 <div class="colbreakinsideno">
                     <h2 class="center">Where do I find this MDS</h2>
-                    <p class="li-bullet">A pdf reference contains categorized modules and their responsive design variations.</p>
-                    <p class="li-bullet">A companion html/css file gives real world experience in browsers. See demo at https://embersl.github.io/mds/</p>
+                    <p class="li-bullet">A pdf reference with categorized modules and their responsive design variations.</p>
+                    <p class="li-bullet">A companion html/css demo site - https://embersl.github.io/mds/</p>
                     <p class="li-bullet">A use case library provides some real project examples.</p>
                 </div>
             </article>
@@ -117,7 +118,7 @@
                 </li>
 
                 <li>
-                    <h4>Form & Input Modules</h4>
+                    <h4>Form &amp; Input Modules</h4>
                     <a href="demo.html#f_1">F_1 &bull; Form Simple</a>
                     <a href="demo.html#f_2">F_2 &bull; Form Complex</a>
                 </li>
@@ -154,50 +155,47 @@
         <section id="visual" class="visual">
             <picture>
                 <source srcset="vector/homepage/visual_composition.png" media="(min-width: 768px)">
-                <img src="vector/homepage/visual_composition.png" alt="img name">
+                <img src="vector/homepage/visual_composition.png" alt="mds components">
             </picture>
             <ul class="padding">
                 <h2 class="center">Visual</h2>
                 <li>
+                    <h4>Structure</h4>
+                    <p>The headers and layout composition help establish the hierarchy. Let the logical and meaningful structure guide viewers through the content.</p>
+                </li>
+                <li>
+                    <h4>Unified look</h4>
+                    <p>Balanced formatting &amp; consistent appearance across all modules and components. Universal styles and CSS get put to work.</p>
+                </li>
+                <li>
                     <h4>Minimal styling</h4>
-                    <p>A clean wireframe feel allows for complete focus on concept, strategy and problem solving without visual distractions.</p>
-                </li>
-                <li>
-                    <h4>Functions</h4>
-                    <p>The collection covers a wide range of components for common design tasks. Designed with purposes and usages in mind.</p>
-                </li>
-                <li>
-                    <h4>Consistent look</h4>
-                    <p>Balanced &amp; Harmonious formatting across all modules and components. Universal visual styling(color scheme, fonts, imageries) made easy.</p>
+                    <p>A clean wireframe feel allows for complete focus on concept &amp; strategy without visual distractions. Visual customization comes later in the design process.</p>
                 </li>
                 <li>
                     <h4>Responsive layout</h4>
-                    <p>Modules are optimized for multiple screens and input mechanisms, such as desktop, tablet, mobile devices. Visual mockups available for all 3 viewport breakpoints</p>
+                    <p>Modules are optimized for multiple viewport sizes to deliver best experience on desktop, tablet, mobile devices. Visual mockups are available for 3 viewport breakpoints.</p>
                 </li>
                 <li>
                     <h4>Versatile</h4>
-                    <p>It's easy mix &amp; match, repurpose, customize the components to suit the project’s needs.</p>
+                    <p>It’s easy to mix &amp; match, repurpose and reinvent based on the needs. Everything can be customized to suit the project’s content and strategy.</p>
                 </li>
                 <li>
-                    <h4>Structure</h4>
-                    <p>Placed headers &amp; composition help establish the outline &amp; hierarchy. Let the logical and meaningful structure guide viewers through the content.</p>
+                    <h4>Functions</h4>
+                    <p>The collection covers a wide range of components for common design tasks. Each module designed with clear purposes and usages in mind.</p>
                 </li>
-
-                <li>
-
             </ul>
         </section>
         <section id="collaboration" class="collaboration padding">
             <h2 class="center">Collaboration</h2>
             <div>
                 <article>
-                    <p>Across teams we can build common vocabulary for visual components and layouts. Within the creative team we can better allocate responsibilities and prototype design options fast. When working with the marketing team we can effectively communicate by providing examples and use cases before we start doing actual design.</p>
-                    <h4>Copywriter</h4>
-                    <p>Review the modules and identify the parts that will be populated with the copy such as headings, sub-heads, captions, quotes, body text etc. Understanding the usage, pattern and relationship among the content is beneficial -  with structure, visual, word count in mind, it’s easier to optimize content and expedite revisions.</p>
-                    <h4>Designer</h4>
-                    <p>Use the design system as a source of inspiration, and a start point for more interesting and complex creations. A standardized workflow make sit easy to transfer &amp; pick up projects among colleagues.</p>
-                    <h4>Stakeholder</h4>
-                    <p>Visualize the outcome and build realistic expectation, understand product experience and responsive behaviors, potentially get more involved and identify problems early. </p>
+                    <p>We often need to process the information we receive from the client. Prioritizing and rearranging the content are the necessary steps to form a compelling narrative for visual design. Within the creative team we can better allocate responsibilities and strategize design options fast. When working with the other teams, we can effectively communicate with examples, use cases and common vocabulary.</p>
+                    <h4>Content</h4>
+                    <p>Copywriters can use the modules to assist storytelling. Understanding the usage, pattern, rhythm and relationship among the content is beneficial -  with structure, visual, word count in mind, it’s easier to optimize content and expedite revisions.</p>
+                    <h4>Prototype</h4>
+                    <p>Help stakeholders visualize the outcome and build realistic expectation, understand product experience and responsive behaviors, potentially get more involved and identify problems early.</p>
+                    <h4>Continuity</h4>
+                    <p>Use the design system as a source of inspiration, and a start point for more interesting and complex creations. A standardized workflow makes it easy to transfer &amp; pick up projects among colleagues.</p>
                 </article>
                 <figure>
                     <img src="vector/homepage/collaboration.png" alt="collaboration">
@@ -206,37 +204,37 @@
         </section>
         <section id="interaction" class="interaction">
             <figure>
-                <img src="vector/homepage/new_modules_1344.png" alt="placeholder">
-                <img src="vector/homepage/new_modules_896.png" alt="placeholder">
-                <img src="vector/homepage/new_modules_448.png" alt="placeholder">
+                <img src="vector/homepage/new_modules_1344.png" alt="viewport 1344px">
+                <img src="vector/homepage/new_modules_896.png" alt="viewport 896px">
+                <img src="vector/homepage/new_modules_448.png" alt="viewport 448px">
             </figure>
             <article class="padding">
                 <h2 class="center">Interaction</h2>
                 <ul>
                     <li>
                         <figure>
-                            <img src="vector/homepage/responsive.png" alt="placeholder">
+                            <img src="vector/homepage/responsive.png" alt="illustration responsive">
                         </figure>
                         <h4>Responsive</h4>
                         <p>Fluid design adapts to different screen properties and user input mechanisms on both desktop and mobile devices.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/form.png" alt="placeholder">
+                            <img src="vector/homepage/form.png" alt="illustration form">
                         </figure>
                         <h4>Web forms</h4>
                         <p>Html web form &amp; inputs provide good interaction experience across broswers and platforms.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/microtransition.png" alt="placeholder">
+                            <img src="vector/homepage/microtransition.png" alt="illustration micro-interaction">
                         </figure>
-                        <h4>Microinteractions</h4>
+                        <h4>Micro-interactions</h4>
                         <p>Subtle changes and animations serve as hints for people who use mouse, keyboard or touch screen to browse the web.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/print.png" alt="placeholder">
+                            <img src="vector/homepage/print.png" alt="illustration print styles">
                         </figure>
                         <h4>Print styles</h4>
                         <p>Dedicated printer optimized css that makes printed pages come out fast, look great and stay authentic to the original web design.</p>

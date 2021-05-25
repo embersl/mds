@@ -16,12 +16,11 @@
 <body>
     <nav id="navbar" class="nav">
         <ul>
-            <li><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
+            <li><a href="http://embersl.github.io/mds/"><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></a></li>
+            <li><a href="index.html" class="navhover">Home</a></li>
+            <li><a href="demo.html" class="navhover">Modules</a></li>
         </ul>
     </nav>
-    <nav></nav>
     <section id="ct_1" class="ct_1">
         <h2 class="center">CT_1 • Content 2-Col</h2>
         <div class="m_ct_1">
@@ -1042,7 +1041,7 @@
     <fieldset>
     <legend>Subscriber Types</legend>
     <label><input type="checkbox" id="individual" name="subscriber" value="individual" >Individual</label>
-    <label><input type="checkbox" id="coporate" name="subscriber" value="coporate" >Coporate</label> 
+    <label><input type="checkbox" id="coporate" name="subscriber" value="corporate" >Corporate</label> 
     </fieldset>
     <button type="submit">Subscribe</button>
     </form>
@@ -1053,16 +1052,16 @@
     <h2>Detailed Registration Form</h2>
     <ul>
     <li class="flex-400">
-    <label for="email">Email Address</label>
-    <input type="email" name="email" id="email" placeholder="example@email.com">
+    <label for="emailf2">Email Address</label>
+    <input type="email" name="email" id="emailf2" placeholder="example@email.com">
     </li>
     <li>
-    <label for="fname">First Name</label>
-    <input type="text" name="firstname" id="fname" placeholder="John">
+    <label for="namef2">First Name</label>
+    <input type="text" name="firstname" id="namef2" placeholder="John">
     </li> 
     <li>
-    <label for="lname">Last Name</label>
-    <input type="text" name="lastname" id="lname" placeholder="Smith">
+    <label for="lnamef2">Last Name</label>
+    <input type="text" name="lastname" id="lnamef2" placeholder="Smith">
     </li> 
     <li class="flex-400">
     <label for="pword">Password</label>
@@ -1070,28 +1069,28 @@
     </li>
     <li class="flex-100">
     <label for="city">City</label>
-    <input type="text" name="city" id="city" placeholder="City or County Name">
+    <input type="text" name="city" id="city" placeholder="city, county or town">
     </li>
     <li class="flex-100">
     <label for="state">State</label>
     <select id="state" name="state">
 <!--    <option selected disabled>please select</option>-->
-    <option>please select</option>
-    <option>California</option>
-    <option>Washinton</option>
-    <option>Oregon</option>
-    <option>Massachusetts</option>
-    <option>Florida</option>
-    <option>Luisiana</option>
+    <option value="placeholder">please select</option>
+    <option value="placeholder">California</option>
+    <option value="placeholder">Washinton</option>
+    <option value="placeholder">Oregon</option>
+    <option value="placeholder">Massachusetts</option>
+    <option value="placeholder">Florida</option>
+    <option value="placeholder">Luisiana</option>
     </select>
         </li>
     <li class="flex-100">
-    <label for="email">Zip code</label>
-    <input type="text" name="email" id="email" placeholder="6 digits">
+    <label for="zipcode">Zip code</label>
+    <input type="text" name="zipcode" id="zipcode" placeholder="6 digits">
     </li> 
     <li class="flex-400">
-    <label for="email">Birthdate</label>
-    <input type="date">
+    <label for="bdate">Birthdate</label>
+    <input type="date" name="bdate" id="bdate">
     </li> 
     <li class="flex-400">
     <fieldset>
