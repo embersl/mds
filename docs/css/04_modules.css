@@ -12,6 +12,16 @@
 /* module specific elements */
         --h_2-hide: none;
         
+        --cd_4-griditempadding: 0.6rem;
+        --cd_4-griditemlogoh: 24px;
+        --cd_4-griditemorder: -1;
+        --cd_4-gridsquarepadding: 70%;
+        --cd_4-gridhidedescription: none;
+        
+        --cd_5-gridgap: 1rem;
+        --cd_5-griditempadding: 0.6rem;
+        --cd_5-griditemheight: 400px;
+        
         --co_5-grid-column: 1 / -1;
         
         --co_6-profile-margin: 30vw auto 0;
@@ -44,6 +54,14 @@
         --colrule: 1px dashed var(--sw-12);
         
 /* module specific elements */
+        --cd_4-grid321: repeat(2, 1fr);
+        --cd_4-gridspan: span 2;
+        --cd_4-griditempadding: 1rem;
+        --cd_4-gridsquarepadding: 100%;
+        --cd_4-gridhidedescription: block;
+        
+        --cd_5-gridgap: 2rem;
+        --cd_5-griditempadding: 1.5rem;
        
     }
 }
@@ -64,6 +82,16 @@
 /*        module specific elements */
         
         --h_2-hide: block;
+        
+        --cd_4-griditempadding: 1rem;
+        --cd_4-griditemlogoh: 32px;
+        --cd_4-griditemorder: unset;
+        --cd_4-grid321: repeat(3, 1fr);
+        
+        --cd_5-grid21: repeat(2, 1fr);
+        --cd_5-gridgap: 2px;
+        --cd_5-griditempadding: 1.5rem;
+        --cd_5-griditemheight: 600px;
         
         --co_5-grid-column: span 1 / -1;
         --co_5-grid-row: 1 / span 4; /* no grid-template-row, no grid line -1 for row, has to be explicit grids */
@@ -97,6 +125,11 @@
 /*        module specific elements */
         --co_5-grid-row: 1 / span 2;
         --grid5432gallery-height: calc(100vw / 5 * 2);
+        
+        --cd_4-griditempadding: 1.5rem;
+        --cd_4-grid2colcapwidth: 50%;
+        
+        --cd_5-griditempadding: 2rem;
     }
 }
 
@@ -108,6 +141,21 @@
         
 /*        columns */
 /*        --colgap: 56px;*/
+        
+        
+        --cd_4-griditempadding: 2rem;
+        --cd_4-griditemlogoh: 48px;
+        
+        --cd_5-griditempadding: 2.5rem;
+        
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    :root {
+        --cd_4-griditempadding: 2.5rem;
+        
+        --cd_5-griditempadding: 3rem;
     }
 }
 
@@ -166,6 +214,10 @@
 
 /*==========  nav bar  ==========*/
 
+.navtoppadding {
+    background-color: var(--sw-15-5);
+    padding-top: 48px;
+}
 .nav.nav {
     padding: 0 calc(var(--l_r_negmargin) * -1);
     box-shadow: var(--boxshadow-card);
@@ -600,6 +652,128 @@
 .m_cd_3 .card-imgbg,
 .m_cd_3 .figimgcover {
     align-self: stretch;
+}
+
+
+
+.m_cd_4 .figimgcover > img {
+    transition: var(--02transition);
+}
+.m_cd_4 .figimgcover:hover > img {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+.m_cd_4 figcaption {
+    padding: 0 var(--margin) var(--cd_4-griditempadding);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.m_cd_4 .logo {
+    display: block;
+    position: static;
+    height: var(--cd_4-griditemlogoh);
+    width: auto;
+}
+.m_cd_4 h3 {
+    margin: var(--cd_4-griditempadding) 0 calc(var(--cd_4-griditempadding) * 0.5);
+}
+.m_cd_4 .btn-cta {
+    margin: var(--cd_4-griditempadding) 0 0 auto;
+}
+.m_cd_4 .cardgridcontainer {
+    display: grid;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: var(--cd_4-grid321);
+    grid-auto-rows: 1fr;
+    grid-gap: var(--margin);
+    grid-auto-flow: dense;
+}
+.grid_2col {
+    grid-column: var(--cd_4-gridspan);
+}
+.grid_2row {
+    grid-row: var(--cd_4-gridspan);
+}
+.grid_square {
+    padding-top: var(--cd_4-gridsquarepadding);
+    justify-content: center;
+/*    the top padding determines height for all grid rows - on smallest viewport, it's 60% width*/
+}
+.grid_2col figcaption {
+    width: var(--cd_4-grid2colcapwidth);
+}
+.grid_square figcaption {
+    bottom: calc(50% - var(--cd_4-griditempadding) * 0.5);
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 100%;
+}
+.grid_square :is(h3, .logo, .btn-cta) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.grid_square p {
+    display: none;
+}
+.grid_item_order {
+    order: var(--cd_4-griditemorder);
+}
+
+.m_cd_5 figure {
+    min-height: var(--cd_5-griditemheight);
+}
+.m_cd_5 figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: var(--cd_5-griditempadding);
+}
+.m_cd_5 figure > img {
+    transition: var(--02transition);
+}
+.m_cd_5 figure:hover > img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+.m_cd_5 h3 {
+    margin: var(--marginlarge) 0;
+}
+.m_cd_5 p {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--02transition);
+    opacity: 0;
+}
+.m_cd_5 figure:hover p {
+    max-height: 999px;
+    opacity: 1;
+}
+.m_cd_5 .highlight {
+    color: var(--sw-6);
+    background: var(--sw-16);
+    padding: var(--marginsmall);
+    line-height: 1.8;
+}
+.m_cd_5 .btn-cta {
+    margin: var(--marginlarge) 0 0 auto;
+}
+.m_cd_5 .logo {
+    display: block;
+    position: static;
+    height: var(--cd_4-griditemlogoh);
+    width: auto;
+}
+.m_cd_5 .largegridcontainer {
+    display: grid;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: var(--cd_5-grid21);
+    grid-gap: var(--cd_5-gridgap);
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow-card);
 }
 
 .m_g_1 > div {

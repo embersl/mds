@@ -63,7 +63,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'roboto slab', georgia, sans-serif;
+    font-family: 'roboto slab', georgia, serif;
     font-size: var(--h3);
     font-weight: 500; 
 }
@@ -86,15 +86,25 @@ a {
     color: var(--sw-8);
     transition: var(--02transition);
 }
+a:link {
+/*    color: var(--sw-8)*/
+}
+a:visited {
+/*    color: var(--sw-12);*/
+}
 a:hover, a:focus {
     color: var(--sw-5);
+/*    text-decoration: underline;*/
+}
+a:active {
+    color: var(--sw-2);
 }
 em {
     font-family: georgia, serif;
     font-style: italic;
 }
 cite {
-    font-family: 'roboto slab', serif;
+    font-family: 'roboto slab', helvetica, arial, sans-serif;
     font-style: normal;
     font-weight: 500;
 }

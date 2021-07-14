@@ -2,21 +2,21 @@
 :root {
     --sw-14-5: #e8e8e8;
 }
-body {
-    background-color: var(--sw-15-5);
-    padding-top: 48px;
-}
 body > *:nth-child(odd) {
     background-color: inherit;
 }
 body > *:nth-child(even) {
     background-color: inherit;
 }
-a {
+a, a:link {
     color: var(--sw-6);
 }
-a:hover, a:focus {
+.demo a:visited {
+    color: var(--sw-10);
+}
+.demo a:hover, .demo a:focus {
     color: var(--sw-2);
+    text-decoration: underline 1px;
 }
 h1 {
     margin: var(--margin) 0 var(--marginxl);

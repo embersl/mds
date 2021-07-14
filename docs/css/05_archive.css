@@ -1,0 +1,75 @@
+.imgbglogo-hover::after {
+    content: '';
+    display: block;
+    height: var(--minfigureh);
+    background: url(../vector/logo.svg) no-repeat center / auto 48px, var(--imgbggradient);
+    opacity: 0;
+    transition: var(--02transition);
+}
+.card:hover .imgbglogo-hover::after {
+    opacity: 1;
+}
+
+.imgbgribbon-hover {
+    background: url(../vector/star.svg) no-repeat top 0 right 1em / auto 48px, url(../vector/image.svg) no-repeat center / 100% 100%;
+/*    cover for bg-size doesn't work for transition */
+    transition: var(--02transition);
+}
+.card:hover .imgbgribbon-hover {
+    background-size: auto 52px, 110% 110%;
+/*    transition: var(--02transition);*/
+}
+
+.m_p_1 > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(var(--marginlarge) * -1);
+}
+.m_p_1 iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: 2px solid var(--sw-4);
+    flex: 5 1 380px;
+    margin-right: var(--marginlarge);
+}
+.m_p_1 section {
+    flex: 1 0 260px;
+    margin-top: var(--marginlarge);
+    margin-right: var(--marginlarge);
+}
+.m_p_1 section div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: var(--marginlarge);
+    padding: 0 var(--marginlarge);
+}
+
+.m_cd_3 > div::after, .m_cd_3 > div::before {
+/*    left & right empty place for scrolling negative margin */
+    content: ' ';
+    display: block;
+    flex: 0 0 calc(var(--l_r_negmargin) * -1);
+    height: 2em;
+/*    background-color: green;*/
+}
+
+ .card .marginl {
+    padding: var(--marginlarge) var(--margin);
+}
+
+.m_co_5 section {
+    background: url(../vector/image.svg) no-repeat bottom right / calc(100% - var(--marginxl)) calc(100% - var(--marginxl));
+}
+
+.collage {
+    background: url(../vector/image.svg) no-repeat center top / min(80%, 400px) min(60%, 300px), url(../vector/image.svg) no-repeat right bottom / min(80%, 400px) min(60%, 300px), url(../vector/image.svg) no-repeat left center / min(80%, 400px) min(60%, 300px);
+    transition: var(--02transition);
+}
+.collage:hover {
+    background-position: center top -50px, right -50px bottom -50px, left -50px center;
+}
+
+--co_6-bg: url(../vector/image.svg) no-repeat top / 100% 50vw;
+--co_6-bg: url(../vector/image.svg) no-repeat right min(20vw, 210px) center / cover;

@@ -16,7 +16,6 @@ html {
     :root {
         --padding: 32px 16px;
         --l_r_negmargin: -16px;
-        --paddingnav: 2px 32px;
         --marginsmall: 0.3em;
         --margin: 0.6em;
         --marginlarge: 1.2em;
@@ -28,7 +27,7 @@ html {
 
 @media screen and (min-width: 460px) {
     :root {
-        --padding: 32px 32px;
+        --padding: 32px;
         --l_r_negmargin: -32px;
         --marginsmall: 0.35em;
         --margin: 0.7em;
@@ -41,7 +40,6 @@ html {
     :root {
         --padding: 48px;
         --l_r_negmargin: -48px;
-        --paddingnav: 2px 48px;
         --marginsmall: 0.4em;
         --margin: 0.8em;
         --marginlarge: 1.6em;
@@ -53,11 +51,6 @@ html {
     :root {
         --padding: 64px;
         --l_r_negmargin: -64px;
-        --paddingnav: 2px 64px;
-/*        --marginsmall: 0.45em;*/
-/*        --margin: 0.9em;*/
-/*        --marginlarge: 1.8em;*/
-/*        --marginxl: 2.7em;*/
     }
 }
 
@@ -65,14 +58,27 @@ html {
     :root {
         --padding: 64px 96px;
         --l_r_negmargin: -96px;
-/*        --paddingnav: 2px 96px;*/
+        --marginsmall: 0.45em;
+        --margin: 0.9em;
+        --marginlarge: 1.8em;
+        --marginxl: 2.7em;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    :root {
+        --padding: 80px 128px;
+        --l_r_negmargin: -128px;
+        --marginsmall: 0.5em;
+        --margin: 1em;
+        --marginlarge: 2em;
+        --marginxl: 3em;
     }
 }
 
 @media print {
     :root {
         --padding: 0.25in 0in;
-        --paddingnav: 0.05in 0.25in;
         --l_r_negmargin: 0in;
         --marginsmall: 0.05in;
         --margin: 0.075in;
