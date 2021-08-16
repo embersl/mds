@@ -96,6 +96,9 @@
     }
     
     /*    ======== modules ========*/
+    .navtoppadding {
+        padding-top: 0;
+    }
     .nav.nav {
         position: static;
     }
@@ -129,6 +132,14 @@
     .m_cd_3 > div > * {
         flex-basis: 2.5in;
         margin: unset;
+    }
+    
+    .m_cd_4 figcaption, .m_cd_5 figcaption, .m_cd_5 h3, .m_cd_5 p  {
+        background: none !important;
+    }
+    .m_cd_5 p {
+        max-height: unset;
+        opacity: unset;
     }
     .m_p_1 iframe {
         height: 2in;

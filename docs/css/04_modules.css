@@ -12,14 +12,15 @@
 /* module specific elements */
         --h_2-hide: none;
         
-        --cd_4-griditempadding: 0.6rem;
-        --cd_4-griditemlogoh: 24px;
+        --cd_4-griditemspacing: 0.6rem;
+        --cd_4-griditempadding-bottom: 1rem;
+        --cd_4-griditemlogoh: 28px;
         --cd_4-griditemorder: -1;
         --cd_4-gridsquarepadding: 70%;
         --cd_4-gridhidedescription: none;
         
         --cd_5-gridgap: 1rem;
-        --cd_5-griditempadding: 0.6rem;
+        --cd_5-griditempadding: 1rem 0.6rem;
         --cd_5-griditemheight: 400px;
         
         --co_5-grid-column: 1 / -1;
@@ -56,7 +57,7 @@
 /* module specific elements */
         --cd_4-grid321: repeat(2, 1fr);
         --cd_4-gridspan: span 2;
-        --cd_4-griditempadding: 1rem;
+        --cd_4-griditemspacing: 1rem;
         --cd_4-gridsquarepadding: 100%;
         --cd_4-gridhidedescription: block;
         
@@ -83,7 +84,8 @@
         
         --h_2-hide: block;
         
-        --cd_4-griditempadding: 1rem;
+        --cd_4-griditemspacing: 1rem;
+        --cd_4-griditempadding-bottom: 1rem;
         --cd_4-griditemlogoh: 32px;
         --cd_4-griditemorder: unset;
         --cd_4-grid321: repeat(3, 1fr);
@@ -91,7 +93,7 @@
         --cd_5-grid21: repeat(2, 1fr);
         --cd_5-gridgap: 2px;
         --cd_5-griditempadding: 1.5rem;
-        --cd_5-griditemheight: 600px;
+        --cd_5-griditemheight: 500px;
         
         --co_5-grid-column: span 1 / -1;
         --co_5-grid-row: 1 / span 4; /* no grid-template-row, no grid line -1 for row, has to be explicit grids */
@@ -126,10 +128,12 @@
         --co_5-grid-row: 1 / span 2;
         --grid5432gallery-height: calc(100vw / 5 * 2);
         
-        --cd_4-griditempadding: 1.5rem;
+        --cd_4-griditemspacing: 1.5rem;
+        --cd_4-griditempadding-bottom: 1.5rem;
         --cd_4-grid2colcapwidth: 50%;
         
         --cd_5-griditempadding: 2rem;
+         --cd_5-griditemheight: 600px;
     }
 }
 
@@ -143,7 +147,8 @@
 /*        --colgap: 56px;*/
         
         
-        --cd_4-griditempadding: 2rem;
+        --cd_4-griditemspacing: 2rem;
+        --cd_4-griditempadding-bottom: 2rem;
         --cd_4-griditemlogoh: 48px;
         
         --cd_5-griditempadding: 2.5rem;
@@ -153,7 +158,8 @@
 
 @media screen and (min-width: 1500px) {
     :root {
-        --cd_4-griditempadding: 2.5rem;
+        --cd_4-griditemspacing: 2.5rem;
+        --cd_4-griditempadding-bottom: 2.5rem;
         
         --cd_5-griditempadding: 3rem;
     }
@@ -190,6 +196,20 @@
         --grid5432gallery-height: calc(100vw / 5 * 2);
         
         --h_2-hide: block;
+        
+        --cd_4-griditemspacing: 0.2in;
+        --cd_4-griditempadding-bottom: 0.2in;
+        --cd_4-griditemlogoh: 0.3in;
+        --cd_4-griditemorder: unset;
+        --cd_4-gridsquarepadding: 100%;
+        --cd_4-grid2colcapwidth: 50%;
+        --cd_4-grid321: repeat(3, 1fr);
+        --cd_4-gridspan: span 2;
+        
+        --cd_5-grid21: repeat(2, 1fr);
+        --cd_5-gridgap: 2px;
+        --cd_5-griditempadding: 0.25in;
+        --cd_5-griditemheight: 4in;
         
         --co_5-grid-column: span 1 / -1;
         --co_5-grid-row: 1 / span 2;
@@ -659,12 +679,14 @@
 .m_cd_4 .figimgcover > img {
     transition: var(--02transition);
 }
-.m_cd_4 .figimgcover:hover > img {
+.m_cd_4 .figimgcover:hover > img,
+.m_cd_4 .figimgcover:focus-within > img {
     transform: scale(1.1);
     filter: brightness(1.05);
 }
 .m_cd_4 figcaption {
-    padding: 0 var(--margin) var(--cd_4-griditempadding);
+    width: 100%;
+    padding: 0 var(--margin) var(--cd_4-griditempadding-bottom);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -676,10 +698,10 @@
     width: auto;
 }
 .m_cd_4 h3 {
-    margin: var(--cd_4-griditempadding) 0 calc(var(--cd_4-griditempadding) * 0.5);
+    margin: var(--cd_4-griditemspacing) 0 calc(var(--cd_4-griditemspacing) * 0.5);
 }
 .m_cd_4 .btn-cta {
-    margin: var(--cd_4-griditempadding) 0 0 auto;
+    margin: var(--cd_4-griditemspacing) 0 0 auto;
 }
 .m_cd_4 .cardgridcontainer {
     display: grid;
@@ -705,7 +727,7 @@
     width: var(--cd_4-grid2colcapwidth);
 }
 .grid_square figcaption {
-    bottom: calc(50% - var(--cd_4-griditempadding) * 0.5);
+    bottom: calc(50% - var(--cd_4-griditemspacing) * 0.5);
     right: 50%;
     transform: translate(50%, 50%);
     width: 100%;
@@ -726,6 +748,7 @@
     min-height: var(--cd_5-griditemheight);
 }
 .m_cd_5 figcaption {
+    width: 100%;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -734,7 +757,8 @@
 .m_cd_5 figure > img {
     transition: var(--02transition);
 }
-.m_cd_5 figure:hover > img {
+.m_cd_5 figure:hover > img, 
+.m_cd_5 figure:focus-within > img {
     transform: scale(1.1);
     filter: brightness(0.9);
 }
@@ -747,8 +771,9 @@
     transition: var(--02transition);
     opacity: 0;
 }
-.m_cd_5 figure:hover p {
-    max-height: 999px;
+.m_cd_5 figure:hover p,
+.m_cd_5 figure:focus-within p {
+    max-height: 150px;
     opacity: 1;
 }
 .m_cd_5 .highlight {
@@ -774,6 +799,13 @@
     grid-gap: var(--cd_5-gridgap);
     background-color: var(--sw-16);
     box-shadow: var(--boxshadow-card);
+}
+
+@media screen and (hover: none) {
+    .m_cd_5 p {
+        max-height: unset;
+        opacity: unset;
+    }
 }
 
 .m_g_1 > div {
