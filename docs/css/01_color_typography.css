@@ -18,8 +18,9 @@
     --sw-12: #bfbfbf;
     --sw-13: #cfcfcf;
     --sw-14: #dfdfdf;
-    --sw-15: #efefef;
-    --sw-15-5: #f7f7f7;
+    --sw-14-5: #e8e8e8;
+    --sw-15: #f0f0f0;
+    --sw-15-5: #f8f8f8;
     --sw-16: #ffffff;
     --70transparent: #ffffffbb;
     --100transparent: #ffffff00;
@@ -155,7 +156,9 @@ sup {
 .right {
     text-align: right;
 }
-
+.nobreak {
+    white-space: nowrap;
+}
 /*==========  generic color settings  ==========*/
 body {
     background-color: var(--sw-16);
