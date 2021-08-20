@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Home - Modular Design System</title>
-    <meta name="description" content="This is a collection of modular components for internal projects">
+    <meta name="description" content="The MDS, Modular Design System is a collection of web modular for internal and client projects.">
+    <meta name="author" content="Su Li">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="SL">
-    <link rel="icon" type="image/png" href="vector/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/10_homepage.css">
 </head>
@@ -15,17 +16,17 @@
 <body class="navtoppadding">
     <nav id="navbar" class="nav">
         <ul>
-            <li><a href="http://embersl.github.io/mds/"><img src="vector/homepage/mds_logo.png" alt="Modular Design System logo"><span>MDS</span></a></li>
+            <li><a href="http://embersl.github.io/mds/"><img src="vector/homepage/logo_mds_144.png" alt="Modular Design System logo"><span>MDS</span></a></li>
             <li><a href="index.html" class="navhover">Home</a></li>
             <li><a href="02_demo.html" class="navhover">Modules</a></li>
         </ul>
     </nav>
     <main>
         <section class="welcome padding">
-            <h1 class="center">Welcome to Modular Design System</h1>
+            <h1 class="center">Welcome to <span class="nobreak">Modular Design System</span></h1>
             <ul class="stats">
-                <li><i class="material-icons">schedule</i><b>Latest release: </b>2021-07-12</li>
-                <li><i class="material-icons">source</i><b>Code name :</b> Chimera</li>
+                <li><i class="material-icons">schedule</i><b>Latest update: </b>2021-07-12</li>
+                <li><i class="material-icons">source</i><b>Code name:</b> Chimera</li>
                 <li><i class="material-icons">dashboard_customize</i><b>Modules: </b>47, in 11 groups</li>
                 <li><i class="material-icons">people</i><b>Contributors: </b>1</li>
                 <li><i class="material-icons">color_lens</i><b>Projects tested: </b>3</li>
@@ -42,8 +43,9 @@
         </section>
         <section id="intro" class="intro">
             <picture>
-                <source srcset="vector/homepage/art.png" media="(min-width: 768px)">
-                <img src="vector/homepage/art.png" alt="MDS intro banner">
+                <source srcset="vector/homepage/img_mdsart_full_1344.png 1344w, vector/homepage/img_mdsart_full_2016.png 2016w, vector/homepage/img_mdsart_full_2688.png 2688w" media="(min-width: 768px)">
+                <source srcset="vector/homepage/img_mdsart_cropped_960.png 960w, vector/homepage/img_mdsart_cropped_1440.png 1440w" media="(max-width: 767px)">
+                <img src="vector/homepage/img_mdsart_full_1344.png" alt="MDS intro banner">
             </picture>
             <article class="padding">
                 <div class="colbreakinsideno">
@@ -51,7 +53,7 @@
                     <p>The Modular Design System is a collection of web modules created for various content and design strategies. Each module comprises components that may be shared with other modules. Together they provide a consistent, unified and adaptive visual presentation. With easy modification and customization, the system offers an efficient approach to common design tasks.</p>
                 </div>
                 <div class="colbreakinsideno">
-                    <h2 class="center">Where do I find this MDS</h2>
+                    <h2 class="center">MDS documents</h2>
                     <p class="li-bullet">A pdf reference with categorized modules and their responsive design variations.</p>
                     <p class="li-bullet">A companion html/css demo site - https://embersl.github.io/mds/</p>
                     <p class="li-bullet">A use case library provides some real project examples.</p>
@@ -155,8 +157,9 @@
         </section>
         <section id="visual" class="visual">
             <picture>
-                <source srcset="vector/homepage/visual_composition.png" media="(min-width: 768px)">
-                <img src="vector/homepage/visual_composition.png" alt="mds components">
+                <source srcset="vector/homepage/img_composition_full_904.png 904w, vector/homepage/img_composition_full_1808.png 1808w, vector/homepage/img_composition_full_2712.png 2712w" media="(min-width: 768px)">
+                <source srcset="vector/homepage/img_composition_croped_1200.png" media="(max-width: 767px)">
+                <img src="vector/homepage/img_composition_full_1808.png" alt="mds components">
             </picture>
             <ul class="padding">
                 <h2 class="center">Visual</h2>
@@ -199,43 +202,43 @@
                     <p>Use the design system as a source of inspiration, and a start point for more interesting and complex creations. A standardized workflow makes it easy to transfer &amp; pick up projects among colleagues.</p>
                 </article>
                 <figure>
-                    <img src="vector/homepage/collaboration.png" alt="collaboration">
+                    <img src="vector/homepage/img_collaboration.png" alt="collaboration">
                 </figure>
             </div>
         </section>
         <section id="interaction" class="interaction">
             <figure>
-                <img src="vector/homepage/new_modules_1344.png" alt="viewport 1344px">
-                <img src="vector/homepage/new_modules_896.png" alt="viewport 896px">
-                <img src="vector/homepage/new_modules_448.png" alt="viewport 448px">
+                <img src="vector/homepage/img_intera_modules_1344.png" alt="viewport 1344px">
+                <img src="vector/homepage/img_intera_modules_896.png" alt="viewport 896px">
+                <img src="vector/homepage/img_intera_modules_448.png" alt="viewport 448px">
             </figure>
             <article class="padding">
                 <h2 class="center">Interaction</h2>
                 <ul>
                     <li>
                         <figure>
-                            <img src="vector/homepage/responsive.png" alt="illustration responsive">
+                            <img src="vector/homepage/img_intera_responsive.png" alt="illustration responsive">
                         </figure>
                         <h4>Responsive</h4>
                         <p>Fluid design adapts to different screen properties and user input mechanisms on both desktop and mobile devices.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/form.png" alt="illustration form">
+                            <img src="vector/homepage/img_intera_form.png" alt="illustration form">
                         </figure>
                         <h4>Web forms</h4>
                         <p>Html web form &amp; inputs provide good interaction experience across broswers and platforms.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/microtransition.png" alt="illustration micro-interaction">
+                            <img src="vector/homepage/img_intera_microtransition.png" alt="illustration micro-interaction">
                         </figure>
                         <h4>Micro-interactions</h4>
                         <p>Subtle changes and animations serve as hints for people who use mouse, keyboard or touch screen to browse the web.</p>
                     </li>
                     <li>
                         <figure>
-                            <img src="vector/homepage/print.png" alt="illustration print styles">
+                            <img src="vector/homepage/img_intera_print.png" alt="illustration print styles">
                         </figure>
                         <h4>Print styles</h4>
                         <p>Dedicated printer optimized css that makes printed pages come out fast, look great and stay authentic to the original web design.</p>
