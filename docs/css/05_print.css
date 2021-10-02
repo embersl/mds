@@ -1,0 +1,183 @@
+@media print {
+/*  for custom properties and color setting see their css  */
+    
+    /*    ======== base ========*/
+    body > * + * {
+        border-top: 0.2pt solid var(--sw-15);
+    }
+    body > * {
+        break-inside: avoid;
+    }
+    form button {
+        display: none;
+    }
+    select, input[type="date"] {
+        color: transparent !important;
+        appearance: none;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+    input::placeholder {
+        color: transparent;
+}
+    blockquote {
+        border: none;
+    }
+    
+    /*    ======== components ========*/
+    .btn-cta, .btn-cta-fullw {
+        display: none;
+    }
+    .icon-nav {
+        display: none;
+    }
+    .imgbgcover {
+/*    background: url(../vector/image.svg) no-repeat center / cover;*/
+}
+    .imgbgscale {
+/*    background: var(--imgbgscale);*/
+}
+    
+    .dotleader {
+    border-bottom: 0.5pt dotted var(--sw-10);
+}
+    .icon-float {
+        border: 1pt solid var(--sw-12);
+        line-height: 1.9em;
+    }
+
+    .icon-round {
+        color: var(--sw-0);
+        border: 1pt solid var(--sw-0);
+    }
+    .card {
+        border: 0.125pt solid var(--sw-14);
+    }
+    .card footer {
+        display: none;
+    }
+    .negmargincontainer {
+        margin: unset;
+    }
+    .negmargincontainer::before, .negmargincontainer::after {
+        display: none;
+    }
+    .scroll-end-sign {
+        display: none;
+    }
+    .icon-anchor::before {
+        font-size: 18pt;
+    }
+    .chip-category {
+        border: 0.125pt solid var(--sw-14);
+    }
+    .profile {
+        max-width: 3in;
+        padding-bottom: var(--margin-m);
+    }
+    .profile i {
+        border: 1pt solid var(--sw-0);
+    }
+    .card.figimgcover img {
+        filter: brightness(1);
+    }
+    .card.figimgcover section {
+        background-color: unset !important;
+    }
+    .card-ribbon {
+        background: none !important;
+    }
+    
+    /*    ======== modules ========*/
+    .navtoppadding {
+        padding-top: 0;
+    }
+    .nav.nav {
+        position: static;
+    }
+    .nav ul {
+        height: 0.4in;
+    }
+    .nav img {
+        height: var(--margin-l);
+    }
+    .nav li:nth-child(n+2) {
+        display: none;
+    }
+    
+    .dotleader {
+    border-bottom: 1pt dotted var(--sw-14);
+    margin-bottom: 0.4em;
+    }
+    .m_h_2 ul {
+        columns: unset;
+        margin: 0 auto;
+    }
+
+    .m_h_6 ul {
+        max-width: 4in;
+    }
+    .m_cd_3 > div {
+        flex-wrap: wrap;
+/*        justify-content: center;*/
+        gap: var(--margin-s);
+    }
+    .m_cd_3 > div > * {
+        flex-basis: 2.5in;
+        margin: unset;
+    }
+    
+    .m_cd_4 figcaption, .m_cd_5 figcaption, .m_cd_5 h3, .m_cd_5 p  {
+        background: none !important;
+    }
+    .m_cd_5 p {
+        max-height: unset;
+        opacity: unset;
+    }
+    .m_p_1 iframe {
+        height: 2in;
+        display: none;
+    }
+    .m_g_1 figure::after {
+        font-size: 18pt;
+        background-color: black;
+    }
+    .m_f_2 form {
+        flex-basis: 6in;
+    }
+    .m_f_2 select {
+        padding: var(--margin-s);
+    }
+    .m_cal_1 tbody * {
+        background-color: unset !important;
+    }
+    
+    .m_tabs_1 ul *, .m_tabs_1 ul *::before {
+        color: var(--sw-8) !important;
+    }
+    .m_tabs_1 li:nth-child(2) a, .m_tabs_1 li:nth-child(2) a::before  {
+        color: var(--sw-0) !important;
+    }
+    .m_tabs_1 li:nth-child(2) a::after {
+        bottom: 0;
+        background-color: currentColor !important;
+    }
+    
+    .m_tabs_2 ul * {
+        color: var(--sw-8) !important;
+    }
+    .m_tabs_2 li:nth-child(2) a {
+        color: var(--sw-0) !important;
+    }
+    .m_tabs_2 li:nth-child(2) a::after {
+        height: 6pt;
+        bottom: -3pt;
+        background-color: currentColor !important;
+    }
+    
+    .m_cal_1 .task {
+/*        background-color: red !important;*/
+        border-top: 3pt solid var(--cal_1-taskcolor);
+    }
+}
