@@ -32,6 +32,8 @@ html {
         
         --minfigureh: 200px;
         --borderradiusround: 999px;
+        
+        --maxwidth: 1800px;
     }
 }
 
@@ -114,7 +116,7 @@ body > * {
 }
 
 .w-wrapper {
-    max-width: 1600px;
+    max-width: var(--maxwidth);
     margin: 0 auto;
 }
 
