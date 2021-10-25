@@ -97,7 +97,9 @@
         position: static;
     }
     .nav ul {
-        height: 0.4in;
+/*        height: 0.3in;*/
+        height: unset;
+        padding-bottom: 0.005in;
     }
     .nav img {
         height: var(--margin-l);

@@ -1,4 +1,7 @@
 /*========== color & type ==========*/
+body {
+    background-color: var(--sw-15-5);
+}
 body > *:nth-child(odd) {
     background-color: unset;
 }
@@ -16,8 +19,7 @@ a:link {
     color: var(--sw-10);
 }
 
-.demo a:hover,
-.demo a:focus {
+:is(.pagelinks, .demo) :is(a:hover, a:focus) {
     color: var(--sw-2);
     text-decoration: underline 1px;
 }
@@ -218,6 +220,8 @@ li + li {
 }
 
 .interaction {
+    --minfigureh: initial;
+/*    for mobile */
     display: flex;
     align-items: flex-start;
 }
@@ -320,7 +324,9 @@ li + li {
         grid-row: span 3;
         grid-column: unset;
     }
-    
+    .demo ul {
+        columns: auto 4;
+    }
     .demo a[href]::after {
     content: "";
     /*    prevent print css from generating "(url)" */
