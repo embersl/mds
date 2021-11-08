@@ -291,8 +291,9 @@
     bottom: -14px;
     transition: var(--02transition);
 }
-.nav .navhover:hover::after {
-    bottom: -8px;
+.nav .navhover:hover::after,
+.nav .navhover:focus::after {
+    bottom: -8px;           
 }
 
 /*==========  list properties  ==========*/
@@ -630,7 +631,8 @@
     grid-gap: var(--margin-m);
     align-items: start;
 }
-.m_cd_1 .card:hover .card-img {
+.m_cd_1 .card:hover .card-img,
+.m_cd_1 .card:focus-within .card-img {
     transform: scale(1.1);
 }
 
@@ -1430,7 +1432,8 @@
     bottom: -12px;
     transition: var(--02transition);
 }
-.m_tabs_2 a:hover::after {
+.m_tabs_2 a:hover::after,
+.m_tabs_2 a:focus::after {
     bottom: -6px;
 }
 

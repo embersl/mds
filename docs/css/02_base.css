@@ -104,6 +104,12 @@ html {
         --margin-l: 0.25in;
         --margin-xl: 0.3in;
         
+        --fixed-spacing-xs: 0.05in;
+        --fixed-spacing-s: 0.075in;
+        --fixed-spacing-m: 0.15in;
+        --fixed-spacing-l: 0.25in;
+        --fixed-spacing-xl: 0.3in;
+        
         --minfigureh: 1.5in;
         --borderradiusround: 999pt;
     }
